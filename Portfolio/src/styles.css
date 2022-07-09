@@ -1,0 +1,324 @@
+h1 {
+    font-family: sans-serif, georgia, arial, helvetica;
+    font-weight: 700;
+    color: #162856;
+}
+
+h2 {
+    font-family: sans-serif, georgia, arial, helvetica;
+    font-weight: 700;
+    color: #162856;
+}
+
+h3{
+    font-family: sans-serif, georgia, arial, helvetica;
+    font-weight: 700;
+    color: #162856;
+}
+
+h4{
+    font-family: sans-serif, georgia, arial, helvetica;
+    font-weight: 700;
+    color: #162856;
+}
+
+h5{
+    font-family: sans-serif, georgia, arial, helvetica;
+    font-weight: 400;
+    font-size:1rem;
+    color: #162856;
+}
+div#up-card {
+    display: flex;
+    width: 100%;
+    border-color: none;
+    background-color: rgb(47, 83, 65);
+    border-radius: 1px;
+    justify-content: space-between;
+} 
+
+div#Logo-AP h4{
+    display:inline;
+    position: relative !important;
+    float:inline;
+    height: 50px;
+    padding:5px;
+    font-size:1.1rem;
+    color: #f4f5f8;
+    font-weight:550;
+    line-height: 0.5;
+}
+
+div#Logo-AP img{
+    display: inline;
+    float:inline-start;
+    position: relative !important;
+    height: 50px;
+    width: 75px;
+}
+
+div#social-media {
+    display: inline;
+    width: 12%;
+    position: relative !important;
+}
+
+button#boton-logIn {
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit; 
+    color: #f4f5f8; 
+    display: inline;
+    width: 120px; 
+    float:inline-end;
+    margin-top: 5px;
+    position: relative !important;
+}
+
+div.mat-card {
+    display: flex;
+    padding: 20px;
+    margin:10px 10px;
+    margin-top:0;
+    background-color: rgb(153, 172, 162);
+    border-radius: 32px;
+    font-weight:400;
+    font-size: 1.2rem;
+}
+
+div.mat-card#first-card {
+    padding: 0;
+}
+
+div#profile-background {
+    display:flex;
+}
+
+div#profile-background img{
+   border-radius: 32px 32px 0px 0px;
+   width: 100%;
+   height: 100%;
+}
+
+div#info-img img{
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin-top: -90px;
+    z-index: 1;
+}
+
+div#boton-perfil a{
+    margin-top: 0px;
+    margin-left: 150px;
+}
+
+
+div#info-contact span {
+    font-size:1rem;
+    font-weight:400;
+}
+
+div#info-contact span a {
+    color: #1577da;
+    touch-action: manipulation;
+    text-decoration: none;
+}
+
+div#info-company {
+    font-size: 1.2rem;
+    font-weight:400;
+    line-height: 1.25;
+    color: #104040;
+}
+
+div#info-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+div#info-data h1 {
+    font-size:1.8rem;
+    display: inline;
+    font-weight:700;
+    line-height: 1.25;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #162856;
+}
+
+div#info-data ul#info-details {
+    width: 232px;
+    list-style: none;
+    flex-shrink: 0;
+}
+
+div#info-data ul#info-details li a {
+    color: black;
+    display: flex;
+    text-decoration: none;
+}
+
+div#info-data ul#info-details li a h4{
+    font-size:1.2rem;
+    align-self: center;
+    vertical-align: baseline;
+    color: #104040;
+}
+
+div#info-data ul#info-details li a img{
+    width: 65px;
+    height: 65px;
+    margin-right: 3px;
+}
+
+div#info-contact {
+    font-size:1.5rem;
+    font-weight:400;
+    line-height: 1.25;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #104040;
+}
+
+div#descripcion div.card-body h4{
+    font-weight:400;
+    font-size: 1.3rem;
+    color: #104040;
+    margin-bottom:0px;
+    margin-top: 0px;
+}
+
+div#descripcion div.card-body h2{
+    margin-bottom:0px;
+}
+
+ul.items-list {
+    list-style: none inside;
+}
+
+ul.items-list li{
+    margin-top: -0.5px;
+    display: flex;
+}
+
+ul.items-list li div.data-container a {
+    color: #104040;
+}
+
+ul.items-list li div.list-info{
+    flex-grow: 1;
+}
+
+ul.items-list li div.list-info h4{
+    font-weight:500;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    color: #104040;
+}
+
+ul.items-list li div.list-info p{
+    font-weight:400;
+    font-size: 1rem;
+    line-height: 0.5rem;
+    color: #104040;
+}
+
+ul.items-list li div.data-container div.logo-image-container a img{
+    z-index: 1;
+    margin-left: -20px;
+    margin-right: 15px;
+    width: 80px;
+    height: 80px;
+}
+
+button#boton-editar {
+    float:inline-end;
+    display: flex;
+    background-color: rgb(153, 172, 162);
+    color: #104040;
+    cursor: pointer;    
+    border-color: rgb(153, 172, 162);
+    text-decoration: none;
+    font-size: 20px;    
+}
+
+div#boton-agregar {
+    display: flex; 
+    float:inline-end;
+    margin-left: 95%;
+}
+
+.btn-primary {
+    background: rgb(33, 58, 45);
+    color: rgb(216, 241, 171);
+    border-color: rgb(47, 83, 65);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.btn-light{
+    border-color: rgb(1, 20, 9);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.btn-right {
+    color: rgb(33, 58, 45);
+    cursor: pointer;
+}
+
+form.add-form div.form-control{
+    margin: 20px 0px;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background: rgb(153, 172, 162);
+    border-color:rgb(33, 58, 45);
+    border-radius: 10px;
+    font-weight:400;
+    font-size: 1.2rem;
+}
+
+div.form-input {
+    background-color: rgb(153, 172, 162);
+    border-color:rgb(33, 58, 45);
+    border-radius: 32px;
+    font-weight:400;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+}
+
+div.form-input input{
+    border-color:rgb(47, 83, 65);
+    border: 1px solid;
+    font-weight:400;
+    font-size: 1.2rem;
+    width: 100%;    
+}
+
+div.form-control-buttons input.btn-block {
+    display: block;
+    width: 20%;
+    background: rgb(33, 58, 45);
+    color: rgb(216, 241, 171);
+    border-color: rgb(47, 83, 65);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    margin-top: 10px;
+}
+
+
+
+.form-control label {
+    display: block;
+}
