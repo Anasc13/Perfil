@@ -14,25 +14,15 @@ export class PersonasComponent implements OnInit {
   constructor(private personaService:PersonaService) { }
 
   ngOnInit(): void {
-    this.getAllPersonas()
-     //let persona1 = new Persona (
-     // "assets/Images/bosques2.png",
-     // "assets/Images/Perfil_circle.JPG",
-     // "Ana", 
-     // "Santa Cruz",
-     // "anasantacruz13@gmail.com",
-     // "Analista de datos",
-     // "Salta (Argentina)",
-     // "OVcM",
-     // "assets/Images/Logo_ovcm.png",
-     // "http://ovcmsalta.gob.ar/")
+     // Like Promise
+    this.personaService.getAllPersonas().subscribe((personas)=>(
+      this.personas = personas
+    ));
     }
-
-    getAllPersonas():void {
-      this.personas = this.personaService.getAllPersonas()
-      }
-      
-    AddPersona (personasparaAgregar: Persona){
-      this.personaService.AddPersona(personasparaAgregar)
+    
+  AddPersona (persona: Persona){
+    this.personaService.AddPersona(persona).subscribe((persona)=>( 
+      this.personas.push(persona))
+    )
   }
 }

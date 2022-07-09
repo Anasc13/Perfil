@@ -7,13 +7,18 @@ import { Persona } from 'src/models/Persona'
   styleUrls: ['./info-personal.component.css']
 })
 export class InfoPersonalComponent implements OnInit {
-  @Input() persona: Persona = new Persona()
-  
+  @Input() persona: any
+  @Output() AddPersona:EventEmitter<Persona> = new EventEmitter()
   
 
   constructor() { }
   
   ngOnInit(): void {
   }
+
+  AgregarPersona(persona:Persona) {
+    this.AddPersona.emit(persona)
  
+}
+
 }

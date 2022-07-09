@@ -1,33 +1,30 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs'
 import { Persona } from 'src/models/Persona'
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':'application/json'
+  })
+} 
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonaService {
-  personas: Persona[] = []
+  private apiUrl = 'http://localhost:5001/personas'
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getAllPersonas(): Persona[] {
-    let persona1 = new Persona (
-      "assets/Images/bosques2.png",
-      "assets/Images/Perfil_circle.JPG",
-      "Ana", 
-      "Santa Cruz",
-      "anasantacruz13@gmail.com",
-      "Analista de datos",
-      "Salta (Argentina)",
-      "OVcM",
-      "assets/Images/Logo_ovcm.png",
-      "http://ovcmsalta.gob.ar/")
-    this.personas.push(persona1)
-    
-    return this.personas
-    }
+  getAllPersonas():  Observable<Persona[]> {
+    return this.http.get<Persona[]>(this.apiUrl)
+  }
+  
+  AddPersona(persona: Persona): Observable<Persona>{
+    return this.http.post<Persona>(this.apiUrl, persona, httpOptions);
+  }
 
-    AddPersona(personas: Persona): void {
-      // TODO implement logic to remove a Persona
-    }
 
 }

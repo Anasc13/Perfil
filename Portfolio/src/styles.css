@@ -266,7 +266,7 @@ div#boton-agregar {
 form.add-form div.form-control{
     margin: 20px 20px;
     display: flex;
-    width: 100%;
+    width: 95%;
     height: 100%;
     background: rgb(153, 172, 162);
     border-color:rgb(33, 58, 45);
@@ -275,37 +275,37 @@ form.add-form div.form-control{
     font-size: 1.2rem;
 }
 
-form.add-form label {
-    display: flex;
-    float:top;
-    font-weight:300;
-    font-size: 1rem;
-}
-
-div.form-control input {
+div.form-input {
     background-color: rgb(153, 172, 162);
     border-color:rgb(33, 58, 45);
     border-radius: 32px;
-    font-weight:300;
+    font-weight:400;
     font-size: 1.2rem;
     width: 100%;
     height: 100%;
 }
 
+div.form-input input{
+    display: inline;
+    border-color:rgb(47, 83, 65);
+    border: 1px solid;
+    font-weight:400;
+    font-size: 1.2rem;
+    width: 100%;    
+}
+
 div.form-control-buttons input.btn-block {
     display: block;
-    width: 100%;
-    height: 50%;
+    width: 20%;
     background: rgb(33, 58, 45);
     color: rgb(216, 241, 171);
     border-color: rgb(47, 83, 65);
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
-    font-family: inherit;   
+    font-family: inherit;
+    margin-top: 10px;
 }
-
-
 
 .form-control label {
     display: block;

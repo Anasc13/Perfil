@@ -1,9 +1,8 @@
 <div class="personas">
     <div class="card mat-card" id="first-card">
-    
     <app-info-personal
     *ngFor="let persona of personas"
-    [persona]="persona"
+    [persona] = "persona"
     ></app-info-personal>
     <app-edit-persona
     (onAddPersona)="AddPersona($event)"

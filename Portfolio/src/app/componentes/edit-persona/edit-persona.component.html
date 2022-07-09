@@ -3,20 +3,18 @@
 *ngIf="showAddPersona"
 >
 <div class="form-control">
-        
-    <label for="text">Cambia tu información personal: </label>
+    <div class="form-input">
+        <label for="text"> Cambia tu información personal: </label>
         <input type="text"
         name="nombre" 
         id="nombre"  
         placeholder="Agregue nombre" 
         [(ngModel)]="nombre">
-    
         <input type="text"
         name="apellido" 
         id="apellido" 
         placeholder="Agregue apellido" 
         [(ngModel)]="apellido">
-        
         <input type="text" 
         name="mail" 
         id="mail"
@@ -26,4 +24,5 @@
             <input type="submit" value="Guardar cambios" class="btn btn-block">
         </div>
     </div>
+</div>
 </form>
