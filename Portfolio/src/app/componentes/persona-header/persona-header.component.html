@@ -1,0 +1,9 @@
+<header>
+    <router-outlet routerLink="/editarPersona"
+    ></router-outlet>
+    <app-boton-edit
+    (btnClick)="toggleAddPersona()"
+    color = "{{ showAddPersona? '#162856' : '#104040' }}"
+    text  = "{{ showAddPersona ? 'Editar' : ' '}}"
+    ></app-boton-edit>
+</header>

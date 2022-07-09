@@ -1,5 +1,12 @@
 <div class="personas">
-    <div *ngFor="let persona of personas">
-        <app-info-personal [persona]="persona"></app-info-personal>
-    </div>
+    <div class="card mat-card" id="first-card">
+    
+    <app-info-personal
+    *ngFor="let persona of personas"
+    [persona]="persona"
+    ></app-info-personal>
+    <app-edit-persona
+    (onAddPersona)="AddPersona($event)"
+    ></app-edit-persona>
+</div>
 </div>

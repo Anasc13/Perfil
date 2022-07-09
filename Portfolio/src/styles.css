@@ -234,17 +234,6 @@ ul.items-list li div.data-container div.logo-image-container a img{
     height: 80px;
 }
 
-button#boton-editar {
-    float:inline-end;
-    display: flex;
-    background-color: rgb(153, 172, 162);
-    color: #104040;
-    cursor: pointer;    
-    border-color: rgb(153, 172, 162);
-    text-decoration: none;
-    font-size: 20px;    
-}
-
 div#boton-agregar {
     display: flex; 
     float:inline-end;
@@ -275,9 +264,9 @@ div#boton-agregar {
 }
 
 form.add-form div.form-control{
-    margin: 20px 0px;
+    margin: 20px 20px;
     display: flex;
-    width: 50%;
+    width: 100%;
     height: 100%;
     background: rgb(153, 172, 162);
     border-color:rgb(33, 58, 45);
@@ -286,35 +275,34 @@ form.add-form div.form-control{
     font-size: 1.2rem;
 }
 
-div.form-input {
+form.add-form label {
+    display: flex;
+    float:top;
+    font-weight:300;
+    font-size: 1rem;
+}
+
+div.form-control input {
     background-color: rgb(153, 172, 162);
     border-color:rgb(33, 58, 45);
     border-radius: 32px;
-    font-weight:400;
+    font-weight:300;
     font-size: 1.2rem;
     width: 100%;
     height: 100%;
 }
 
-div.form-input input{
-    border-color:rgb(47, 83, 65);
-    border: 1px solid;
-    font-weight:400;
-    font-size: 1.2rem;
-    width: 100%;    
-}
-
 div.form-control-buttons input.btn-block {
     display: block;
-    width: 20%;
+    width: 100%;
+    height: 50%;
     background: rgb(33, 58, 45);
     color: rgb(216, 241, 171);
     border-color: rgb(47, 83, 65);
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
-    font-family: inherit;
-    margin-top: 10px;
+    font-family: inherit;   
 }
 
 

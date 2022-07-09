@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Persona } from 'src/models/Persona'
 
 @Component({
@@ -8,9 +8,12 @@ import { Persona } from 'src/models/Persona'
 })
 export class InfoPersonalComponent implements OnInit {
   @Input() persona: Persona = new Persona()
-  constructor() { }
+  
+  
 
+  constructor() { }
+  
   ngOnInit(): void {
   }
-
+ 
 }
