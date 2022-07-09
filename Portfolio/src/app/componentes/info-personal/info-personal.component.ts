@@ -7,7 +7,7 @@ import { Persona } from 'src/models/Persona'
   styleUrls: ['./info-personal.component.css']
 })
 export class InfoPersonalComponent implements OnInit {
-  @Input() persona: any
+  @Input() persona: any;
   @Output() AddPersona:EventEmitter<Persona> = new EventEmitter()
   
 
