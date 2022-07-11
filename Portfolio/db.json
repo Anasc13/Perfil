@@ -1,16 +1,16 @@
 {
-    "personas": [
+    "Persona": [
         {
-            "backImage": "assets/Images/bosques2.png",
-            "profileImage": "assets/Images/Perfil_circle.JPG",
+            "backImage": "../assets/Images/bosques2.png",
+            "profileImage": "../assets/Images/Perfil_circle.JPG",
             "nombre": "Ana",
             "apellido": "Santa Cruz",
             "mail": "anasantacruz13@gmail.com",
             "postition": "Analista de datos",
             "ubication": "Salta (Argentina)",
             "companyName":"OVcM",
-            "companyImg": "assets/Images/Logo_ovcm.png",
+            "companyImg": "../assets/Images/Logo_ovcm.png",
             "ucompanyUrl": "http://ovcmsalta.gob.ar/"
-        }
-    ]
+            }
+        ]
 }

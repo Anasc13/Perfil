@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-boton-edit',
@@ -6,9 +8,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./boton-edit.component.css']
 })
 export class BotonEditComponent implements OnInit {
-  @Input() color: string = "";
-  @Input() text: string = "";
   @Output() btnClick = new EventEmitter()
+  @Input() icon: string = "";
+
+  faEdit = faEdit;
+  faMinus = faMinus;
 
   constructor() { }
 

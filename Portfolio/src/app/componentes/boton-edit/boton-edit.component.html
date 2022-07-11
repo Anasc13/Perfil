@@ -1,8 +1,9 @@
-<button id="boton-editar" 
-    class= "fa fa-pen" 
+<button><fa-icon
+ id="boton-editar" 
+    class= "btn-edit" 
+    [ icon]="icon"
+    [ngStyle]="{'color':'rgb(1, 20, 9)'}"
     (click)="onClick()"
-    [ngStyle]="{'background-color': color}"
->
-    {{text}}
+    >
+</fa-icon>
 </button>
-

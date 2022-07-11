@@ -1,4 +1,5 @@
 export interface Persona {
+    id?:string;
     backImage?:string;
     profileImage?:string;
     nombre?:string;

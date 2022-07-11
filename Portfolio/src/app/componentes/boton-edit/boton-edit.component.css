@@ -1,5 +1,4 @@
-button#boton-editar {
-    margin-left: 230px;
+button#boton-editar {    
     display: flex;
     cursor: pointer;    
 }

@@ -7,22 +7,54 @@
         <label for="text"> Cambia tu información personal: </label>
         <input type="text"
         name="nombre" 
-        id="nombre"  
+        id="addnombre"  
         placeholder="Agregue nombre" 
         [(ngModel)]="nombre">
+    </div>
+    <div class="form-input">
         <input type="text"
         name="apellido" 
-        id="apellido" 
+        id="addapellido" 
         placeholder="Agregue apellido" 
         [(ngModel)]="apellido">
+    </div>
+    <div class="form-input">
         <input type="text" 
         name="mail" 
-        id="mail"
+        id="addmail"
         placeholder="Agregue e-mail" 
         [(ngModel)]="mail">
+    </div>
+    <div class="form-input">
+        <input type="text"
+        name="position" 
+        id="addposition"  
+        placeholder="Agregue posición" 
+        [(ngModel)]="position">
+      </div>
+      <div class="form-input">
+        <input type="text"
+        name="ubication" 
+        id="addubication"  
+        placeholder="Agregue ubicación" 
+        [(ngModel)]="ubication">
+    </div>
+    <div class="form-input">
+        <input type="text"
+        name="companyUrl" 
+        id="addcompanyUrl"  
+        placeholder="Agregue url" 
+        [(ngModel)]="companyUrl">
+    </div>
+    <div class="form-input">
+        <input type="text"
+        name="companyName" 
+        id="addcompanyName"  
+        placeholder="Agregue nombre de empresa" 
+        [(ngModel)]="companyName">
+    </div>
         <div class="form-control-buttons">
             <input type="submit" value="Guardar cambios" class="btn btn-block">
         </div>
     </div>
-</div>
 </form>

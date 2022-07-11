@@ -1,9 +1,7 @@
-<header>
-    <router-outlet routerLink="/editarPersona"
-    ></router-outlet>
+<div>
     <app-boton-edit
+    icon = "{{showAddPersona ? 'faMinus':'faEdit'}}"
     (btnClick)="toggleAddPersona()"
-    color = "{{ showAddPersona? '#162856' : '#104040' }}"
-    text  = "{{ showAddPersona ? 'Editar' : ' '}}"
-    ></app-boton-edit>
-</header>
+    *ngIf="hasRoute('/')"
+></app-boton-edit>
+</div>

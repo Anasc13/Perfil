@@ -1,11 +1,10 @@
-<div class="personas">
-    <div class="card mat-card" id="first-card">
-    <app-info-personal
-    *ngFor="let persona of personas"
-    [persona] = "persona"
-    ></app-info-personal>
-    <app-edit-persona
-    (onAddPersona)="AddPersona($event)"
-    ></app-edit-persona>
-</div>
+<div class="card mat-card" id="first-card">
+    <div id="profile-background"><img [src]="personaList[0].backImage" alt="Foto_banner"></div>
+    <div id="info" style="padding: 16px">
+        <div id="info-img">
+            <img class="profile-image rounded-circle" [src]="personaList[0].profileImage" alt="Foto_pefil">
+   <app-item-persona 
+    *ngFor="let persona of personaList"
+     [personaList] = "personaList"
+></app-item-persona>
 </div>
