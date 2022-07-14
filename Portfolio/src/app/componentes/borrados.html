@@ -1,6 +1,9 @@
+<app-boton-edit
+            color = "{{ showEditPersona ? '#162856' : '#104040' }}"
+            (Click)="editPersona(persona)"></app-boton-edit>
+
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
-import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-boton-edit',
@@ -9,11 +12,10 @@ import { faMinus } from '@fortawesome/free-solid-svg-icons';
 })
 export class BotonEditComponent implements OnInit {
   @Output() btnClick = new EventEmitter()
-  @Input() icon: string = "";
-
+  @Input() color: string = "";
+  
   faEdit = faEdit;
-  faMinus = faMinus;
-
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -22,5 +24,13 @@ export class BotonEditComponent implements OnInit {
   onClick(){
     this.btnClick.emit();
   }
-
 }
+
+<button>
+    <fa-icon 
+    id="boton-editar"
+    class="btn-edit"
+    [icon]="faEdit"
+    [ngStyle]="{'color': color}"
+    (click)="onClick()">
+</fa-icon></button>

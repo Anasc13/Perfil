@@ -1,54 +1,44 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { EditService } from 'src/app/service/edit.service'
-import { Subscription } from 'rxjs';
-import { Persona } from 'src/models/Persona';
-
-
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PersonaService } from 'src/app/service/persona.service'
+import { Persona } from 'src/models/Interfaces';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-edit-persona',
   templateUrl: './edit-persona.component.html',
   styleUrls: ['./edit-persona.component.css']
 })
+
 export class EditPersonaComponent implements OnInit {
+  @Output() OnEditarPersona: EventEmitter<Persona> =new EventEmitter();
+  @Input() showEditPersona: boolean = false;
+  @Input() persAeditar: Persona= { nombre: "", apellido: "", mail: "", position: "", ubication: "", companyName: "", companyImg:"", companyUrl: "" };
 
-  @Output() onAddPersona: EventEmitter<Persona> =new EventEmitter();
-
-  nombre: string =""; 
-  apellido: string ="";
-  mail: string ="";
-  position: string ="";
-  ubication: string ="";
-  companyUrl: string ="";
-  companyName: string ="";
-  showAddPersona: boolean = false;
-  subscription?: Subscription;
-
-
+  id=this.persAeditar.id;
+  nombre: string=this.persAeditar.nombre;
+  apellido: string=this.persAeditar.apellido;
+  mail: string=this.persAeditar.mail;
+  position: string=this.persAeditar.position;
+  ubication: string=this.persAeditar.ubication;
+  companyName: string=this.persAeditar.companyName;
+  companyImg:string=this.persAeditar.companyImg;
+  companyUrl: string=this.persAeditar.companyUrl;
+  
+  faEnvelope=faEnvelope
+  
   constructor(
-    private editService:EditService) 
-  {
-    this.subscription = this.editService.onToggle()
-      .subscribe(value => this.showAddPersona = value)
-   }
+    private personaService:PersonaService) 
+  { }
+  
   ngOnInit(): void {
   }
 
   onSubmit(){
-    if(this.nombre.length==0){
-      alert("Agrega un nombre!");
-    }
-    if(this.apellido.length==0){
-      alert("Agrega un apellido!");
-    }
-    if(this.mail.length==0){
-      alert("Agrega un e-mail!");
-      return;
-    }
-
-    const {nombre, apellido, mail, position, ubication, companyUrl, companyName} =this;
-    const newPersona= {nombre, apellido, mail, position,ubication,companyUrl,companyName};
-    this.onAddPersona.emit(newPersona);
+    const {nombre, apellido, mail, position, ubication, companyName, companyImg, companyUrl} =this;
+    const editPersona= {nombre, apellido, mail, position, ubication, companyName, companyImg, companyUrl};
+    console.log(editPersona);
+    this.OnEditarPersona.emit(editPersona);
+    this.showEditPersona!=this.showEditPersona;
   }
 
 }

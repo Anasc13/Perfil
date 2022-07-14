@@ -8,19 +8,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonasComponent } from './componentes/personas/personas.component';
 import { EditPersonaComponent } from './componentes/edit-persona/edit-persona.component';
-import { BotonEditComponent } from './componentes/boton-edit/boton-edit.component';
-import { PersonaHeaderComponent } from './componentes/persona-header/persona-header.component';
-import { ItemPersonaComponent } from './componentes/item-persona/item-persona.component';
-
+import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
+import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { SkillsComponent } from './componentes/skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonasComponent,
     EditPersonaComponent,
-    BotonEditComponent,
-    PersonaHeaderComponent,
-    ItemPersonaComponent
+    EncabezadoComponent,
+    AcercaDeComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    ProyectosComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,

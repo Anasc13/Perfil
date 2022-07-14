@@ -4,9 +4,7 @@ import { EditPersonaComponent } from './componentes/edit-persona/edit-persona.co
 import { PersonasComponent } from './componentes/personas/personas.component';
 
 
-const Routes: Routes = [
-  { path: 'editarPersona', component: EditPersonaComponent, pathMatch: 'full' },
-];
+const Routes: Routes = [ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(Routes, {enableTracing: true })],

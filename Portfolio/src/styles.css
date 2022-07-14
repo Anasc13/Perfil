@@ -30,10 +30,11 @@ h5{
 }
 div#up-card {
     display: flex;
-    width: 100%;
+    margin: 0px 10px 0px 10px;
+    width: 99%;
     border-color: none;
     background-color: rgb(47, 83, 65);
-    border-radius: 1px;
+    border-radius: 5px;
     justify-content: space-between;
 } 
 
@@ -46,7 +47,7 @@ div#Logo-AP h4{
     font-size:1.1rem;
     color: #f4f5f8;
     font-weight:550;
-    line-height: 0.5;
+    line-height: 2.5;
 }
 
 div#Logo-AP img{
@@ -115,25 +116,6 @@ div#boton-perfil a{
     margin-left: 150px;
 }
 
-
-div#info-contact span {
-    font-size:1rem;
-    font-weight:400;
-}
-
-div#info-contact span a {
-    color: #1577da;
-    touch-action: manipulation;
-    text-decoration: none;
-}
-
-div#info-company {
-    font-size: 1.2rem;
-    font-weight:400;
-    line-height: 1.25;
-    color: #104040;
-}
-
 div#info-data {
     display: flex;
     justify-content: space-between;
@@ -149,38 +131,49 @@ div#info-data h1 {
     color: #162856;
 }
 
-div#info-data ul#info-details {
-    width: 232px;
-    list-style: none;
-    flex-shrink: 0;
+div#info-data h5 {
+    font-size:1.1rem;
+    font-weight:400;
+    line-height: 1.25;
+    color: #162856;
 }
 
-div#info-data ul#info-details li a {
-    color: black;
+div#info-contact {
+    font-size:1.2rem;
+    font-weight:500;
+    line-height: 1.25;
+    color: #104040;
+    text-align: left;
+}
+
+div#info-company {
+    font-size: 1.2rem;
+    font-weight:500;
+    line-height: 1.25;
+    color: #104040;
+    text-align: left;
+}
+
+div#info-data ul#info-details {
     display: flex;
+    list-style: none;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+div#info-data ul#info-details li a{
+    color: #104040;
     text-decoration: none;
 }
 
 div#info-data ul#info-details li a h4{
     font-size:1.2rem;
-    align-self: center;
-    vertical-align: baseline;
     color: #104040;
 }
 
 div#info-data ul#info-details li a img{
     width: 65px;
-    height: 65px;
-    margin-right: 3px;
-}
-
-div#info-contact {
-    font-size:1.5rem;
-    font-weight:400;
-    line-height: 1.25;
-    word-wrap: break-word;
-    word-break: break-word;
-    color: #104040;
+    height: 65px;      
 }
 
 div#descripcion div.card-body h4{
@@ -234,12 +227,6 @@ ul.items-list li div.data-container div.logo-image-container a img{
     height: 80px;
 }
 
-div#boton-agregar {
-    display: flex; 
-    float:inline-end;
-    margin-left: 95%;
-}
-
 .btn-primary {
     background: rgb(33, 58, 45);
     color: rgb(216, 241, 171);
@@ -248,7 +235,6 @@ div#boton-agregar {
     text-decoration: none;
     font-size: 15px;
     font-family: inherit;
-    
 }
 
 .btn-light{
@@ -264,40 +250,28 @@ div#boton-agregar {
     cursor: pointer;
 }
 
-form.add-form div.form-control{
-    margin: 20px 20px;
-    display: flex;
-    width: 95%;
-    height: 100%;
-    background: rgb(153, 172, 162);
-    border-color:rgb(33, 58, 45);
-    border-radius: 10px;
-    font-weight:400;
-    font-size: 1.2rem;
-}
-
-div.form-input {
-    background-color: rgb(153, 172, 162);
-    border-color:rgb(33, 58, 45);
-    border-radius: 32px;
-    font-weight:400;
-    font-size: 1.2rem;
-    width: 100%;
-    height: 100%;
-}
-
-div.form-input input{
-    display: inline;
+form.add-form{
     border-color:rgb(47, 83, 65);
-    border: 1px solid;
-    font-weight:400;
-    font-size: 1.2rem;
-    width: 100%;    
+    border-radius: 5px;
 }
 
-div.form-control-buttons input.btn-block {
-    display: block;
-    width: 20%;
+div.form-group{
+    margin-top: 5px;
+    margin-bottom: 5px;    
+}
+
+div.form-group input{
+    background-color: rgb(203, 216, 209);
+    border-color:rgb(47, 83, 65);
+    border-radius: 5px;
+    font-weight:400;
+    font-size: 1rem;
+    width: 50%;    
+}
+
+div.form-control-buttons button{
+    display: flex;
+    width: 12%;
     background: rgb(33, 58, 45);
     color: rgb(216, 241, 171);
     border-color: rgb(47, 83, 65);
@@ -310,4 +284,6 @@ div.form-control-buttons input.btn-block {
 
 .form-control label {
     display: block;
+    font-family: inherit;
+    text-align: left
 }
