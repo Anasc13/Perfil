@@ -2,8 +2,6 @@
     <div id="education">
     <div class="card-title">
       <h2>Educación</h2>
-      <div id="boton-editar" class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-plus"></i></a></div>
-    </div>
     <div>
       <ul class="items-list">
         <li *ngFor="let education of educationList">
@@ -15,12 +13,14 @@
           </div>
           </div>
         <div class="list-info">
-          <div id="boton-agregar" class="data-control">
-            <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
-            <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-trash "></i></a></div>
-        </div>
-          <div>
-            <h4>{{educationList[0].title}} en {{educationList[0].career}}</h4>
+            <div>
+            <h4>{{educationList[0].title}} en {{educationList[0].career}}
+                <fa-icon
+                [icon]="faTimes"
+                [ngStyle]="{'color':'red'}"
+                (click)="onDelete(educacion)">
+                ></fa-icon>
+            </h4>
             <p>{{educationList[0].school}}</p>
             <p>Promedio: {{educationList[0].score}}</p>
             <p>Año de inicio: {{educationList[0].start}}</p>

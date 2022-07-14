@@ -4,16 +4,16 @@ import { Observable, Subject} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class EditService {
-  private showEditPersona:boolean = false;
+  private showAdd:boolean = false;
   private subjet = new Subject<any>();
 
   constructor() { }
 
-  toggleEditPersona(): void {
-    this.showEditPersona = !this.showEditPersona;
-    this.subjet.next(this.showEditPersona);
-    console.log(this.showEditPersona);
+  toggleAdd(): void {
+    this.showAdd = !this.showAdd;
+    this.subjet.next(this.showAdd);
   }
 
   onToggle(): Observable<any> {

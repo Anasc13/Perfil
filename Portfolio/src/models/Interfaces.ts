@@ -16,10 +16,12 @@ export interface Banner {
     }
 
 export interface Acerca {
+  id?: number;
   about:string;
 }
  
 export interface Education {
+  id?: number;
   school:string;
   title:string;
   img:string;
@@ -30,6 +32,7 @@ export interface Education {
 }
 
 export interface Experience {
+  id?: number;
   position:string;
   company:string;
   img:string;
@@ -40,6 +43,7 @@ export interface Experience {
 }
 
 export interface Proyectos {
+  id?: number;
   img:string;
   name:string;
   description:string;
@@ -49,6 +53,7 @@ export interface Proyectos {
 }
 
 export interface Skills {
+  id?: number;
   name:string;
   img:string;
 }
