@@ -59,8 +59,7 @@ div#Logo-AP img{
 }
 
 div#social-media {
-    display: inline;
-    width: 12%;
+    float:inline-end;
     position: relative !important;
 }
 
@@ -188,41 +187,33 @@ div#descripcion div.card-body h2{
     margin-bottom:0px;
 }
 
-ul.items-list {
-    list-style: none inside;
-}
-
-ul.items-list li{
-    margin-top: -0.5px;
-    display: flex;
-}
-
-ul.items-list li div.data-container a {
+div.data-container a {
     color: #104040;
 }
 
-ul.items-list li div.list-info{
+div.list-info{
     flex-grow: 1;
 }
 
-ul.items-list li div.list-info h4{
+div.list-info h4{
     font-weight:500;
     font-size: 1.5rem;
     line-height: 1rem;
     color: #104040;
 }
 
-ul.items-list li div.list-info p{
+div.list-info p{
     font-weight:400;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 0.5rem;
     color: #104040;
 }
 
-ul.items-list li div.data-container div.logo-image-container a img{
+div.data-container div.logo-image-container a img{
     z-index: 1;
-    margin-left: -20px;
+    margin-left: -5px;
     margin-right: 15px;
+    margin-bottom: 5px;
     width: 80px;
     height: 80px;
 }
@@ -250,28 +241,27 @@ ul.items-list li div.data-container div.logo-image-container a img{
     cursor: pointer;
 }
 
-form.add-form{
-    border-color:rgb(47, 83, 65);
-    border-radius: 5px;
+form.add-form div.form-control{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    background:  rgb(153, 172, 162);
+    border-color: rgb(153, 172, 162);
 }
 
-div.form-group{
-    margin-top: 5px;
-    margin-bottom: 5px;    
-}
-
-div.form-group input{
+div.form-control input{
+    display: flex;
     background-color: rgb(203, 216, 209);
     border-color:rgb(47, 83, 65);
     border-radius: 5px;
     font-weight:400;
     font-size: 1rem;
-    width: 50%;    
+    width: 50%; 
 }
 
-div.form-control-buttons button{
-    display: flex;
-    width: 12%;
+div.form-control-buttons input.btn-block{
+    display: block;
+    width: 8%;
     background: rgb(33, 58, 45);
     color: rgb(216, 241, 171);
     border-color: rgb(47, 83, 65);
@@ -279,11 +269,16 @@ div.form-control-buttons button{
     text-decoration: none;
     font-size: 15px;
     font-family: inherit;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-left: 15px;
 }
 
 .form-control label {
-    display: block;
+    display: flex;
     font-family: inherit;
-    text-align: left
+    text-align: left;
+    color:rgb(1, 20, 9);
+    width: 50%;
+    height: 10%;
+    line-height: 0.5rem;
 }

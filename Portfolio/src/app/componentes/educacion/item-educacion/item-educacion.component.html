@@ -1,0 +1,22 @@
+<div class="data-container"
+*ngFor="let education of educationList"
+>
+  <div class="logo-image-container">
+    <a href="#">
+    <img class="logo-image" [src]="educationList.img"></a>
+  </div>
+<div class="list-info">
+  <div>
+    <h4>{{educationList.title}} en {{educationList.career}}
+      <fa-icon
+      [icon]="faTimes"
+      [ngStyle]="{'color':'red'}"
+      (click)="onDelete(educationList)"
+      ></fa-icon>
+      </h4>
+      <p>{{educationList.school}}</p>
+      <p>Promedio: {{educationList.score}}</p>
+      <p>Año de inicio: {{educationList.start}}</p>
+  </div>
+</div>
+</div>

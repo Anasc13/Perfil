@@ -5,14 +5,10 @@
             <div id="info-img">
                 <img class="profile-image rounded-circle" [src]="bannerList[0].profileImage" alt="Foto_pefil">
             </div>
-            <div class="btn-edit"
-            (click)="editPersona(persona)">
-            <a href="#" class="btn-right"></a>
-            <fa-icon 
-            id="boton-editar"
-            class="btn-edit"
-            [icon]="faEdit"
-            [ngStyle]="{ 'color':'#104040'}"></fa-icon></div>
+            <app-button
+            color = "{{ showAddPersonas ? '#162856' : '#104040' }}"
+            (click)="OntoggleAddPersonas()"
+            ></app-button>
             <div id="info-data">
                 <div>
                 <h1>{{personaList[0].nombre}} {{personaList[0].apellido}}</h1>
@@ -27,9 +23,8 @@
                     </a></li></ul></div>
             </div>
             <app-edit-persona
-            [persAeditar]="personaAeditar"
-            (OnEditarPersona)="editarPersona($event)"
-            [showEditPersona]="showEditPersona"></app-edit-persona>
+            (OnAddPersona)="AddPersona($event)"
+            ></app-edit-persona>
         </div>
     </div>
 </div>

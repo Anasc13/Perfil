@@ -1,69 +1,64 @@
-<form class="add-form" #myForm="ngForm"
-(ngSubmit)="onSubmit(); myForm.resetForm()"
-*ngIf="showEditPersona"
+<form class="add-form"
+(ngSubmit)="onSubmit()"
+*ngIf="showAddPersonas"
 >
-<div class="form-group">
+
+<div class="form-control">
     <label for="text"> Cambia tu información personal: </label></div>
-    <div class="form-group">
+    <div class="form-control">
         <input type="text"
         name="nombre" 
         id="addnombre"  
         placeholder="Agregue nombre" 
-        [(ngModel)]="persAeditar.nombre"
-        value="{{persAeditar.nombre}}">
+        [(ngModel)]="nombre">
     </div>
-    <div class="form-group">
+    <div class="form-control">
         <input type="text"
         name="apellido" 
         id="addapellido" 
         placeholder="Agregue apellido" 
-        [(ngModel)]="persAeditar.apellido"
-        value="{{persAeditar.apellido}}">
+        [(ngModel)]="apellido">
     </div>
-    <div class="form-group">
+    <div class="form-control">
         <input type="e-mail" 
         name="mail" 
         id="addmail"
         placeholder="Agregue e-mail" 
-        [(ngModel)]="persAeditar.mail"
-        value="{{persAeditar.mail}}">
+        [(ngModel)]="mail">
     </div>
-    <div class="form-group">
+    <div class="form-control">
         <input type="text"
         name="position" 
         id="addposition"  
         placeholder="Agregue posición" 
-        [(ngModel)]="persAeditar.position"
-        value="{{persAeditar.position}}">
+        [(ngModel)]="position">
       </div>
-      <div class="form-group">
+      <div class="form-control">
         <input type="text"
         name="ubication" 
         id="addubication"  
         placeholder="Agregue ubicación" 
-        [(ngModel)]="persAeditar.ubication"
-        value="{{persAeditar.ubication}}">
+        [(ngModel)]="ubication">
     </div>
-    <div class="form-group">
+    <div class="form-control">
         <input type="text"
         name="companyUrl" 
         id="addcompanyUrl"  
         placeholder="Agregue url" 
-        [(ngModel)]="persAeditar.companyUrl"
-        value="{{persAeditar.companyUrl}}">
+        [(ngModel)]="companyUrl">
     </div>
-    <div class="form-group">
+    <div class="form-control">
         <input type="text"
         name="companyName" 
         id="addcompanyName"  
         placeholder="Agregue nombre de empresa" 
-        [(ngModel)]="persAeditar.companyName"
-        value="{{persAeditar.companyName}}">
+        [(ngModel)]="companyName">
     </div>
+    
         <div class="form-control-buttons">
-            <button class="btn btn-block"
+            <input class="btn btn-block"
             type="submit" 
-            > Guardar cambios</button>
+            > Guardar cambios
         </div>
 </form>
 

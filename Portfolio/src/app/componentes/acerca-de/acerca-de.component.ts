@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonaService } from 'src/app/service/persona.service';
+import { EditService } from 'src/app/service/edit.service';
+import { Subscription } from 'rxjs';
 import { Acerca } from 'src/models/Interfaces';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-acerca-de',
@@ -10,13 +11,29 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 })
 export class AcercaDeComponent implements OnInit {
   acercaList: Acerca[] = [];
-  faEdit = faEdit;
+  
+  showAddAcerca: boolean = false;
+  subscription?: Subscription;
 
-  constructor(private personaService:PersonaService) { }
+  constructor(private personaService:PersonaService,private editService: EditService) 
+  { 
+    this.subscription = this.editService.onToggleAcerca()
+                              .subscribe((value) => this.showAddAcerca = value)
+  }
 
   ngOnInit(): void {
-    this.personaService.getAcerca().subscribe(data=>{
-      this.acercaList=(data);
+    this.personaService.getAcerca().subscribe((acercaList)=>{
+      this.acercaList=acercaList;
   });
+  }
+
+  AddAcerca (acerca: Acerca){
+    this.personaService.AddAcerca(acerca).subscribe((acerca)=>( 
+      this.acercaList.push(acerca))
+    )
+  }
+
+  OnToggleAddAcerca (){
+    this.editService.toggleAddAcerca();
   }
 }

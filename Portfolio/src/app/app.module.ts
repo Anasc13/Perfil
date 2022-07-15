@@ -7,13 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { PersonasComponent } from './componentes/personas/personas.component';
-import { EditPersonaComponent } from './componentes/edit-persona/edit-persona.component';
+import { EditPersonaComponent } from './componentes/personas/edit-persona/edit-persona.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
+import { ButtonComponent } from './componentes/button/button.component';
+import { ItemEducacionComponent } from './componentes/educacion/item-educacion/item-educacion.component';
+import { AddEducationComponent } from './componentes/educacion/add-education/add-education.component';
+import { AddAcercaComponent } from './componentes/acerca-de/add-acerca/add-acerca.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { SkillsComponent } from './componentes/skills/skills.component';
     EducacionComponent,
     ProyectosComponent,
     SkillsComponent,
+    ButtonComponent,
+    ItemEducacionComponent,
+    AddEducationComponent,
+    AddAcercaComponent,
   ],
   imports: [
     BrowserModule,

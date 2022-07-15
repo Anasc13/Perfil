@@ -1,0 +1,15 @@
+<form class="add-form" 
+(ngSubmit)="onSubmit()"
+*ngIf="showAddAcerca"
+>
+<div class="form-control">
+    <input type="text"
+    name="about"
+    id="about"
+    placeholder="Agregue descripción"
+    [(ngModel)]="about">
+</div>
+<div class="form-control-buttons">
+    <input type="submit" value="Guardar cambios" class="btn btn-block">
+</div>
+</form>

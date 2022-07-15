@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PersonaService } from 'src/app/service/persona.service';
+import { EditService } from 'src/app/service/edit.service';
 import { Persona } from 'src/models/Interfaces';
 import { Banner } from 'src/models/Interfaces';
-import { EditService } from 'src/app/service/edit.service';
 import { Subscription } from 'rxjs';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-personas',
@@ -12,12 +12,10 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./personas.component.css']
 })
 export class PersonasComponent implements OnInit {
-  @Input() persona: any;
-  personaAeditar: Persona= { nombre: "", apellido: "", mail: "", position: "", ubication: "", companyName: "", companyImg:"", companyUrl: "" };
-  showEditPersona:boolean=false;
+  
+  showAddPersonas:boolean=false;
   subscription?:Subscription;
-  indice:number = -1;
-  faEdit = faEdit;
+  
   
   personaList: Persona[] = [];
   bannerList: Banner[] = [];
@@ -26,31 +24,25 @@ export class PersonasComponent implements OnInit {
     private personaService:PersonaService, 
     private editService:EditService,
     ) {
-       this.subscription=this.editService.onToggle()
-         .subscribe(value => this.showEditPersona=value);
+       this.subscription=this.editService.onTogglePersonas()
+         .subscribe(value => this.showAddPersonas=value);
   }
 
   ngOnInit(): void {
-      this.personaService.getAllPersonas().subscribe((personas)=>(
-      this.personaList=personas
+      this.personaService.getAllPersonas().subscribe((personaList)=>(
+      this.personaList=personaList
     ));
     this.personaService.getAllBanners().subscribe((banner)=>(
       this.bannerList=banner
     ))
     }
+   
+    AddPersona(persona: Persona){    
+      this.personaService.AddPers(persona).subscribe((persona)=>( 
+      this.personaList.push(persona))
+    )}
 
-    editPersona(persona: Persona){
-      this.indice = this.personaList.indexOf(persona);
-      this.personaAeditar=persona;
-      this.editService.toggleEditPersona();
-      console.log(this.showEditPersona);
-      console.log(this.indice, this.personaList[this.indice].id, persona);
+    OntoggleAddPersonas (){
+      this.editService.toggleAddPersonas();
     }
-  
-    editarPersona(persona: Persona){
-      console.log(persona, persona.id);
-      this.personaService.UpdatePersona(persona, this.indice).subscribe((t)=> 
-        this.personaList[this.indice]=persona);
-      this.editService.toggleEditPersona();
-    }
-  }  
+}

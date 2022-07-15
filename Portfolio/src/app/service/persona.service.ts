@@ -34,6 +34,10 @@ export class PersonaService {
     return this.http.get<Acerca[]>(this.apiUrl2)
   }
 
+  AddAcerca(acerca: Acerca): Observable<Acerca>{
+    return this.http.post<Acerca>(this.apiUrl2,acerca,httpOptions);
+  }
+
   //Personas
   getAllPersonas():  Observable<Persona[]> {
     return this.http.get<Persona[]>(this.apiUrl)
@@ -41,10 +45,6 @@ export class PersonaService {
   
   getPersonas(id: number): Observable<Persona>{
     return this.http.get<Persona>(`${this.apiUrl}/${id}`)
-  }
-
-  UpdatePersona(persona: Persona, index: number): Observable<Persona>{
-    return this.http.put<Persona>(`${this.apiUrl}/${index}`, persona, httpOptions);
   }
 
   AddPers(persona: Persona): Observable<Persona>{
@@ -56,9 +56,27 @@ export class PersonaService {
     return this.http.get<Education[]>(this.apiUrl3)
   }
 
+  deleteEducation(education:Education): Observable<Education>{
+    const url = `${this.apiUrl3}/${education.id}`
+    return this.http.delete<Education>(url)
+  }
+
+  AddEducation(education:Education): Observable<Education>{
+    return this.http.post<Education>(this.apiUrl3, education, httpOptions);
+  }
+
   //experience
   getExperience(): Observable<Experience[]> {
     return this.http.get<Experience[]>(this.apiUrl4)
+  }
+
+  deleteExperience(experience:Experience): Observable<Experience>{
+    const url = `${this.apiUrl4}/${experience.id}`
+    return this.http.delete<Experience>(url)
+  }
+
+  AddExperience(experience:Experience): Observable<Experience>{
+    return this.http.post<Experience>(this.apiUrl4, experience, httpOptions);
   }
 
   //Proyectos
@@ -66,9 +84,28 @@ export class PersonaService {
     return this.http.get<Proyectos[]>(this.apiUrl5)
   }
 
+  deleteProyectos(proyecto:Proyectos): Observable<Proyectos>{
+    const url = `${this.apiUrl5}/${proyecto.id}`
+    return this.http.delete<Proyectos>(url)
+  }
+
+  AddProyectos(proyecto:Proyectos): Observable<Proyectos>{
+    return this.http.post<Proyectos>(this.apiUrl5, proyecto, httpOptions);
+  }
+
   //Skills
   getSkills(): Observable<Skills[]> {
     return this.http.get<Skills[]>(this.apiUrl6)
   }
+
+  deleteSkills(skill:Skills): Observable<Skills>{
+    const url = `${this.apiUrl6}/${skill.id}`
+    return this.http.delete<Skills>(url)
+  }
+
+  AddSkills(skill:Skills): Observable<Skills>{
+    return this.http.post<Skills>(this.apiUrl6, skill, httpOptions);
+  }
+
 
 }
