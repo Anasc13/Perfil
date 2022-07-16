@@ -1,22 +1,22 @@
-<div class="data-container"
-*ngFor="let education of educationList"
->
+<div class="education">
   <div class="logo-image-container">
-    <a href="#">
-    <img class="logo-image" [src]="educationList.img"></a>
+    <img class="logo-image" [src]="education.img">
   </div>
 <div class="list-info">
-  <div>
-    <h4>{{educationList.title}} en {{educationList.career}}
-      <fa-icon
-      [icon]="faTimes"
-      [ngStyle]="{'color':'red'}"
-      (click)="onDelete(educationList)"
-      ></fa-icon>
+  <ul>
+    <li>
+      <h4>
+        {{education.title}} en {{education.career}}
+        <fa-icon
+        [icon]="faTrash"
+        [ngStyle]="{'#162856' : '#104040'}"
+        (click)="onDelete(education)">
+        ></fa-icon>
       </h4>
-      <p>{{educationList.school}}</p>
-      <p>Promedio: {{educationList.score}}</p>
-      <p>Año de inicio: {{educationList.start}}</p>
+    </li>
+      <p>{{education.school}}</p>
+      <p>Promedio: {{education.score}}</p>
+      <p>Año de inicio: {{education.start}}</p>
+      </ul>
   </div>
-</div>
 </div>

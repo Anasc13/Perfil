@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Education } from 'src/models/Interfaces';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-item-educacion',
@@ -9,9 +9,9 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class ItemEducacionComponent implements OnInit {
   @Output() OnDeleteEducation: EventEmitter<Education> = new EventEmitter()
+  @Input()  education: any;
   
-  educationList: any;
-  faTimes = faTimes;
+  faTrash = faTrash;
  
   constructor() { }
 

@@ -1,3 +1,8 @@
+export interface Banner {
+  backImage: string;
+  profileImage: string
+}
+
 export interface Persona {
     id?: number;
     nombre: string;
@@ -8,12 +13,7 @@ export interface Persona {
     companyName: string;
     companyImg: string;
     companyUrl: string;
-}
-
-export interface Banner {
-      backImage: string;
-      profileImage: string
-    }
+} 
 
 export interface Acerca {
   id?: number;

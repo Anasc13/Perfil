@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditPersonaComponent } from './componentes/personas/edit-persona/edit-persona.component';
-import { PersonasComponent } from './componentes/personas/personas.component';
+import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
+import { LogInComponent } from './componentes/log-in/log-in.component';
 
-
-const Routes: Routes = [ ];
+const Routes: Routes = [ 
+  { path: 'login', component: LogInComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(Routes, {enableTracing: true })],

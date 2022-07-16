@@ -22,17 +22,6 @@
       "about": "Socióloga especialista en análisis y gestión de información cuantitativa y georreferenciada."
     }
   ],
-  "Experience": [
-    {
-      "position": "Analista de datos",
-      "company": "Observatorio de Violencia contra las Mujeres",
-      "img": "assets/Images/Logo_ovcm.png",
-      "mode": "part-time",
-      "start": "2019",
-      "end": "a la actualidad",
-      "timeElapsed": "3 años"
-    }
-  ],
   "Education": [
     {
       "school": "Universidad de Buenos Aires",
@@ -51,6 +40,17 @@
       "score": 0,
       "start": 2013,
       "end": "a la actualidad"
+    }
+  ],
+  "Experience": [
+    {
+      "position": "Analista de datos",
+      "company": "Observatorio de Violencia contra las Mujeres",
+      "img": "assets/Images/Logo_ovcm.png",
+      "mode": "part-time",
+      "start": "2019",
+      "end": "a la actualidad",
+      "timeElapsed": "3 años"
     }
   ],
   "Projects": [

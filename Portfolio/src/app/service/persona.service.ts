@@ -5,7 +5,10 @@ import { Persona, Banner, Acerca, Education, Experience, Proyectos, Skills } fro
 
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type':'application/json'})} 
+  headers: new HttpHeaders({
+    'Content-Type':'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +16,13 @@ const httpOptions = {
 
 export class PersonaService {
   
-  private apiUrl1='http://localhost:5001/banner'
-  private apiUrl='http://localhost:5001/persona'
-  private apiUrl2='http://localhost:5001/acerca'
-  private apiUrl3='http://localhost:5001/education'
-  private apiUrl4='http://localhost:5001/experience'
-  private apiUrl5='http://localhost:5001/proyectos'
-  private apiUrl6='http://localhost:5001/skills'
+  private apiUrl1='http://localhost:5000/banner'
+  private apiUrl='http://localhost:5000/persona'
+  private apiUrl2='http://localhost:5000/acerca'
+  private apiUrl3='http://localhost:5000/education'
+  private apiUrl4='http://localhost:5000/experience'
+  private apiUrl5='http://localhost:5000/proyectos'
+  private apiUrl6='http://localhost:5000/skills'
 
 
   constructor(private http:HttpClient) { }
@@ -34,6 +37,12 @@ export class PersonaService {
     return this.http.get<Acerca[]>(this.apiUrl2)
   }
 
+  deleteAcerca(acerca: Acerca): Observable<Acerca>{
+    console.log(acerca.id)
+    const url=`${this.apiUrl2}/${acerca.id}`
+    return this.http.delete<Acerca>(url);
+  }
+
   AddAcerca(acerca: Acerca): Observable<Acerca>{
     return this.http.post<Acerca>(this.apiUrl2,acerca,httpOptions);
   }
@@ -46,6 +55,13 @@ export class PersonaService {
   getPersonas(id: number): Observable<Persona>{
     return this.http.get<Persona>(`${this.apiUrl}/${id}`)
   }
+
+  deletePersonas(persona: Persona): Observable<Persona>{
+    console.log(persona.id)
+    const url=`${this.apiUrl}/${persona.id}`
+    return this.http.delete<Persona>(url);
+  }
+  
 
   AddPers(persona: Persona): Observable<Persona>{
     return this.http.post<Persona>(this.apiUrl,persona,httpOptions);

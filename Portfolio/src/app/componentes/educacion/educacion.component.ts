@@ -1,10 +1,6 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PersonaService } from 'src/app/service/persona.service';
-import { EditService } from 'src/app/service/edit.service';
-import { Subscription } from 'rxjs';
 import { Education } from 'src/models/Interfaces';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
 
 @Component({
   selector: 'app-educacion',
@@ -12,22 +8,14 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  @Output() OnDeleteEducation: EventEmitter<Education> = new EventEmitter()
-  
   educationList: Education[] = [];
-  faTimes = faTimes;
-  showAddEducation: boolean = false;
-  subscription?: Subscription;
 
-  constructor(private personaService:PersonaService,
-    private editService: EditService) 
-  { 
-    this.subscription = this.editService.onToggleEducation()
-                              .subscribe((value) => this.showAddEducation = value)
-  }
+ constructor(private personaService:PersonaService) { }
+
   ngOnInit(): void {
-    this.personaService.getEducation().subscribe((educations)=>{
-      this.educationList = educations;
+    // Like Promise
+    this.personaService.getEducation().subscribe((educationList)=>{
+      this.educationList = educationList;
   });
   }
 
@@ -43,9 +31,5 @@ export class EducacionComponent implements OnInit {
     this.educationList.push(education))
   )}
   
-  OnToggleAddEducation (){
-  this.editService.toggleAddEducation();}
   
-  onDelete(education: Education) {
-  this.OnDeleteEducation.emit(education);}
 }

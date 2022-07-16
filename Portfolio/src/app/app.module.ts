@@ -18,6 +18,7 @@ import { ButtonComponent } from './componentes/button/button.component';
 import { ItemEducacionComponent } from './componentes/educacion/item-educacion/item-educacion.component';
 import { AddEducationComponent } from './componentes/educacion/add-education/add-education.component';
 import { AddAcercaComponent } from './componentes/acerca-de/add-acerca/add-acerca.component';
+import { LogInComponent } from './componentes/log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AddAcercaComponent } from './componentes/acerca-de/add-acerca/add-acerc
     ItemEducacionComponent,
     AddEducationComponent,
     AddAcercaComponent,
+    LogInComponent,
   ],
   imports: [
     BrowserModule,

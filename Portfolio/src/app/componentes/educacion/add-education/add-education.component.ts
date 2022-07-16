@@ -43,4 +43,8 @@ export class AddEducationComponent implements OnInit {
   this.onAddEducation.emit(newEducation);
 }
 
+OnToggleAddEducation (){
+  this.editService.toggleAddEducation();
+}
+
 }
