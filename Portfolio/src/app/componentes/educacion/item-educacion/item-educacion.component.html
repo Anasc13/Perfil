@@ -7,11 +7,12 @@
     <li>
       <h4>
         {{education.title}} en {{education.career}}
-        <fa-icon
-        [icon]="faTrash"
-        [ngStyle]="{'#162856' : '#104040'}"
-        (click)="onDelete(education)">
-        ></fa-icon>
+        <button><fa-icon
+          class="btn"
+          [icon]="faTrash"
+          [ngStyle]="{'#162856' : '#104040'}"
+          (click)="onDelete(education)"
+          ></fa-icon></button>
       </h4>
     </li>
       <p>{{education.school}}</p>

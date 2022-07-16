@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { LogInComponent } from './componentes/log-in/log-in.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
 
-const Routes: Routes = [ 
+const appRoutes: Routes = [ 
   { path: 'login', component: LogInComponent }
 ];
 
+
 @NgModule({
-  imports: [RouterModule.forRoot(Routes, {enableTracing: true })],
+  imports: [RouterModule.forRoot(appRoutes, {enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

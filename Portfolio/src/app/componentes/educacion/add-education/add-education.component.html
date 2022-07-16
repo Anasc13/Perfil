@@ -1,7 +1,7 @@
 <app-button
         color = "{{ showAddEducation ? '#162856' : '#104040' }}"
-        (btnClick)="OnToggleAddEducation()"></app-button>
-        
+        (btnClick)="OnToggleAddEducation()"
+        ></app-button>        
 <form class="add-form" 
 (ngSubmit)="onSubmit()"
 *ngIf="showAddEducation" 

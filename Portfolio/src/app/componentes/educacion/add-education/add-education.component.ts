@@ -23,7 +23,7 @@ export class AddEducationComponent implements OnInit {
   subscription?: Subscription;
 
   constructor(
-    private editService: EditService
+    private editService: EditService,
   ) {
     this.subscription = this.editService.onToggleEducation()
                               .subscribe(value => this.showAddEducation = value )

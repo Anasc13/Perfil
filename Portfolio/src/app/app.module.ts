@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 
+
 import { AppComponent } from './app.component';
 import { PersonasComponent } from './componentes/personas/personas.component';
 import { EditPersonaComponent } from './componentes/personas/edit-persona/edit-persona.component';
@@ -42,7 +43,7 @@ import { LogInComponent } from './componentes/log-in/log-in.component';
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

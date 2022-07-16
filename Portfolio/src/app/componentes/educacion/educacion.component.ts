@@ -22,7 +22,8 @@ export class EducacionComponent implements OnInit {
   deleteEducation(education:Education){
     this.personaService.deleteEducation(education)
     .subscribe(()=>(
-      this.educationList = this.educationList.filter(t => t.id !== education.id )
+      this.educationList = this.educationList.filter
+      (t => t.id !== education.id )
     ))
   }
 

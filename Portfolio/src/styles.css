@@ -62,13 +62,24 @@ div#social-media {
     margin-bottom: 5px;
 }
 
-a#boton-logIn {
+.btn#boton-logIn {
     border-radius: 5px;
+    background: rgb(33, 58, 45);
+    width: 100px;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
     font-family: inherit; 
     color: #f4f5f8; 
+}
+
+.btn#boton-logIn {
+    display: block;
+    
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
 }
 
 div.mat-card {
@@ -210,27 +221,15 @@ div.logo-image-container img{
     height: 60px;
 }
 
-.btn-primary {
-    background: rgb(33, 58, 45);
-    color: rgb(216, 241, 171);
-    border-color: rgb(47, 83, 65);
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
-}
-
-.btn-light{
-    border-color: rgb(1, 20, 9);
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
-}
 
 .btn {
-    color: rgb(33, 58, 45);
+    display: block;
+    background: rgb(153, 172, 162);
+    border-color: rgb(153, 172, 162);
     cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
 }
 
 form.add-form div.form-control{
