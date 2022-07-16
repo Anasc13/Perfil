@@ -73,15 +73,6 @@ div#social-media {
     color: #f4f5f8; 
 }
 
-.btn#boton-logIn {
-    display: block;
-    
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
-}
-
 div.mat-card {
     display: flex;
     padding: 20px;
