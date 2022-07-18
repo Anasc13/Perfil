@@ -3,7 +3,6 @@ import { Subscription } from 'rxjs';
 import { EditService } from 'src/app/service/edit.service';
 import { Education } from 'src/models/Interfaces';
 
-
 @Component({
   selector: 'app-add-education',
   templateUrl: './add-education.component.html',
@@ -12,6 +11,7 @@ import { Education } from 'src/models/Interfaces';
 export class AddEducationComponent implements OnInit {
   @Output() onAddEducation: EventEmitter<Education> =new EventEmitter();
 
+  id?: number
   school:string= '';
   title:string= '';
   img:string= '';

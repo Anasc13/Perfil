@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs'
-import { Persona, Banner, Acerca, Education, Experience, Proyectos, Skills } from 'src/models/Interfaces'
-
+import { Observable, of } from 'rxjs';
+import { Persona, Banner, Acerca, Education, Experience, Proyectos, Skills, LogIn } from 'src/models/Interfaces';
+import { Router } from '@angular/router'
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -24,10 +24,22 @@ export class PersonaService {
   private apiUrl5='http://localhost:5000/proyectos'
   private apiUrl6='http://localhost:5000/skills'
 
+  private apiUrl7='http://localhost:5000/LogIn'
 
-  constructor(private http:HttpClient) { }
 
-  //Banner
+  constructor(private http:HttpClient, 
+    private router:Router) { }
+
+ //LogIn
+  LogIn(email:string, password:string) {
+    this.http.post(this.apiUrl7, {email: email, password: password})
+    .subscribe((resp:any) => {
+      this.router.navigate(['/']);
+      this.http.post<LogIn>(this.apiUrl7, httpOptions);
+    })
+  }
+
+   //Banner
   getAllBanners():  Observable<Banner[]> {
     return this.http.get<Banner[]>(this.apiUrl1)
   }

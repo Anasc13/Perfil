@@ -8,44 +8,82 @@ import { Observable, Subject} from 'rxjs';
 export class EditService {
 
   private showAddEducation:boolean = false;
-  private subjet = new Subject<any>();
+  private subject = new Subject<any>();
   
   private showAddAcerca:boolean = false;
-  private subjet1 = new Subject<any>();
+  private subject1 = new Subject<any>();
 
   private showAddPersonas:boolean = false;
-  private subjet2 = new Subject<any>();
+  private subject2 = new Subject<any>();
+
+  private showAddExperience:boolean = false;
+  private subject3 = new Subject<any>();
+
+  private showAddProyectos:boolean = false;
+  private subject4 = new Subject<any>();
+
+  private showAddSkills:boolean = false;
+  private subject5 = new Subject<any>();
+  
 
   constructor() { }
 
   //Education
   toggleAddEducation(): void {
     this.showAddEducation = !this.showAddEducation;
-    this.subjet.next(this.showAddEducation);
+    this.subject.next(this.showAddEducation);
   }
 
   onToggleEducation(): Observable<any> {
-    return this.subjet.asObservable();
+    return this.subject.asObservable();
   }
 
   //Acerca
   toggleAddAcerca(): void {
     this.showAddAcerca = !this.showAddAcerca;
-    this.subjet1.next(this.showAddAcerca);
+    this.subject1.next(this.showAddAcerca);
   }
 
   onToggleAcerca(): Observable<any> {
-    return this.subjet1.asObservable();
+    return this.subject1.asObservable();
   }
 
   //Personas
   toggleAddPersonas(): void {
     this.showAddPersonas = !this.showAddPersonas;
-    this.subjet2.next(this.showAddPersonas);
+    this.subject2.next(this.showAddPersonas);
   }
 
   onTogglePersonas(): Observable<any> {
-    return this.subjet2.asObservable();
+    return this.subject2.asObservable();
   }
 
+  //Experience
+  toggleAddExperience(): void {
+    this.showAddExperience = !this.showAddExperience;
+    this.subject3.next(this.showAddExperience);
+  }
+
+  onToggleExperience(): Observable<any> {
+    return this.subject3.asObservable();
+  }
+
+   //Experience
+   toggleAddProyectos(): void {
+    this.showAddProyectos = !this.showAddProyectos;
+    this.subject4.next(this.showAddProyectos);
+  }
+
+  onToggleProyectos(): Observable<any> {
+    return this.subject4.asObservable();
+  }
+    //Skills
+    toggleAddSkills(): void {
+      this.showAddSkills = !this.showAddSkills;
+      this.subject5.next(this.showAddSkills);
+    }
+  
+    onToggleSkills(): Observable<any> {
+      return this.subject5.asObservable();
+    } 
 }

@@ -10,8 +10,8 @@ import { Acerca } from 'src/models/Interfaces';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+
   acercaList: Acerca[] = [];
-  
   showAddAcerca: boolean = false;
   subscription?: Subscription;
 
@@ -22,8 +22,8 @@ export class AcercaDeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.personaService.getAcerca().subscribe((acercaList)=>{
-      this.acercaList=acercaList;
+    this.personaService.getAcerca().subscribe((acerca)=>{
+      this.acercaList=acerca;
   });
   }
 

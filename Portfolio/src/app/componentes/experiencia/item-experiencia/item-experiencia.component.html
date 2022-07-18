@@ -1,0 +1,24 @@
+<div class="experience">
+    <div class="logo-image-container">
+      <img class="logo-image" [src]="experience.img">
+    </div>
+  <div class="list-info">
+    <ul>
+      <li>
+        <h4>
+          {{experience.position}} en {{experience.company}}
+          <button class="btn"><fa-icon
+            [icon]="faTrash"
+            [ngStyle]="{'#162856' : '#104040'}"
+            (click)="onDelete(experience)"
+            ></fa-icon></button>
+        </h4>
+      </li>
+        <p>{{experience.mode}}</p>
+        <p>Promedio: {{experience.score}}</p>
+        <p>Año de inicio: {{experience.start}}</p>
+        <p>Año de inicio: {{experience.end}}</p>
+        <p>Año de inicio: {{experience.timeElapsed}}</p>
+        </ul>
+    </div>
+  </div>

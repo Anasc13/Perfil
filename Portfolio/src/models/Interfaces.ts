@@ -37,7 +37,7 @@ export interface Experience {
   company:string;
   img:string;
   mode:string;
-  star:string;
+  start:string;
   end:string;
   timeElapsed:string;
 }
@@ -56,4 +56,10 @@ export interface Skills {
   id?: number;
   name:string;
   img:string;
+}
+
+export interface LogIn {
+  id?: number;
+  email:string;
+  password:string;
 }

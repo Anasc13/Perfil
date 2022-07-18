@@ -1,0 +1,23 @@
+<div class="education">
+    <div class="logo-image-container">
+      <img class="logo-image" [src]="proyecto.img">
+    </div>
+  <div class="list-info">
+    <ul>
+      <li>
+        <h4>
+          {{proyecto.name}} 
+          <button class="btn"><fa-icon
+            [icon]="faTrash"
+            [ngStyle]="{'#162856' : '#104040'}"
+            (click)="onDelete(proyecto)"
+            ></fa-icon></button>
+        </h4>
+        <p>{{proyecto.description}}</p>
+      </li>
+        <p>Año de inicio: {{proyecto.start}}</p>
+        <p>Año de finalización: {{proyecto.finish}}</p>
+        <p>{{proyecto.link}}</p>
+        </ul>
+    </div>
+  </div>

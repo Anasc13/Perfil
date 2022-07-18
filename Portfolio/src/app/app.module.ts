@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -20,6 +20,12 @@ import { ItemEducacionComponent } from './componentes/educacion/item-educacion/i
 import { AddEducationComponent } from './componentes/educacion/add-education/add-education.component';
 import { AddAcercaComponent } from './componentes/acerca-de/add-acerca/add-acerca.component';
 import { LogInComponent } from './componentes/log-in/log-in.component';
+import { AddExperienciaComponent } from './componentes/experiencia/add-experiencia/add-experiencia.component';
+import { ItemExperienciaComponent } from './componentes/experiencia/item-experiencia/item-experiencia.component';
+import { AddProyectoComponent } from './componentes/proyectos/add-proyecto/add-proyecto.component';
+import { ItemProyectoComponent } from './componentes/proyectos/item-proyecto/item-proyecto.component';
+import { AddSkillComponent } from './componentes/skills/add-skill/add-skill.component';
+import { ItemSkillComponent } from './componentes/skills/item-skill/item-skill.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +43,18 @@ import { LogInComponent } from './componentes/log-in/log-in.component';
     AddEducationComponent,
     AddAcercaComponent,
     LogInComponent,
+    AddExperienciaComponent,
+    ItemExperienciaComponent,
+    AddProyectoComponent,
+    ItemProyectoComponent,
+    AddSkillComponent,
+    ItemSkillComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     HttpClientModule
   ],

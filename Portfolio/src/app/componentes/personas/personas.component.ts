@@ -5,7 +5,6 @@ import { Persona } from 'src/models/Interfaces';
 import { Banner } from 'src/models/Interfaces';
 import { Subscription } from 'rxjs';
 
-
 @Component({
   selector: 'app-personas',
   templateUrl: './personas.component.html',
@@ -15,7 +14,6 @@ export class PersonasComponent implements OnInit {
   
   showAddPersonas:boolean=false;
   subscription?:Subscription;
-  
   
   personaList: Persona[] = [];
   bannerList: Banner[] = [];

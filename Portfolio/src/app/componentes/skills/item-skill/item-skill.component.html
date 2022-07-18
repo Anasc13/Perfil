@@ -1,0 +1,17 @@
+<div class="skills">
+  <div class="list-info">
+    <ul>
+      <li>
+        <h4>
+          {{skill.name}}
+          <button class="btn"><fa-icon
+            [icon]="faTrash"
+            [ngStyle]="{'#162856' : '#104040'}"
+            (click)="onDelete(skill)"
+            ></fa-icon></button>
+        </h4>
+      </li>
+      <li><img class="image-fluid" [src]="skill.img"></li>
+        </ul>
+    </div>
+  </div>
