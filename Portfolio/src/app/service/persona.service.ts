@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { Persona, Banner, Acerca, Education, Experience, Proyectos, Skills, LogIn } from 'src/models/Interfaces';
+import { Persona, Acerca, Education, Experience, Proyectos, Skills, LogIn } from 'src/models/Interfaces';
 import { Router } from '@angular/router'
 
 const httpOptions = {
@@ -16,14 +16,12 @@ const httpOptions = {
 
 export class PersonaService {
   
-  private apiUrl1='http://localhost:5000/banner'
-  private apiUrl='http://localhost:5000/persona'
-  private apiUrl2='http://localhost:5000/acerca'
-  private apiUrl3='http://localhost:5000/education'
-  private apiUrl4='http://localhost:5000/experience'
-  private apiUrl5='http://localhost:5000/proyectos'
-  private apiUrl6='http://localhost:5000/skills'
-
+  private apiUrl= 'http://localhost:5000/Persona'
+  private apiUrl2='http://localhost:5000/Acerca'
+  private apiUrl3='http://localhost:5000/Education'
+  private apiUrl4='http://localhost:5000/Experience'
+  private apiUrl5='http://localhost:5000/Proyectos'
+  private apiUrl6='http://localhost:5000/Skills'
   private apiUrl7='http://localhost:5000/LogIn'
 
 
@@ -37,11 +35,6 @@ export class PersonaService {
       this.router.navigate(['/']);
       this.http.post<LogIn>(this.apiUrl7, httpOptions);
     })
-  }
-
-   //Banner
-  getAllBanners():  Observable<Banner[]> {
-    return this.http.get<Banner[]>(this.apiUrl1)
   }
 
   //Acerca
@@ -59,15 +52,15 @@ export class PersonaService {
     return this.http.post<Acerca>(this.apiUrl2,acerca,httpOptions);
   }
 
+  UpdateAcerca(acerca: Acerca): Observable<Acerca>{
+    return this.http.put<Acerca>(this.apiUrl2, acerca, httpOptions);
+  }
+
   //Personas
   getAllPersonas():  Observable<Persona[]> {
     return this.http.get<Persona[]>(this.apiUrl)
   }
   
-  getPersonas(id: number): Observable<Persona>{
-    return this.http.get<Persona>(`${this.apiUrl}/${id}`)
-  }
-
   deletePersonas(persona: Persona): Observable<Persona>{
     console.log(persona.id)
     const url=`${this.apiUrl}/${persona.id}`

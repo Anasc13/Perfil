@@ -1,0 +1,23 @@
+<div class="Personas">
+    <div id="info-data">
+        <div>
+            <h1>{{persona.nombre}} {{persona.apellido}}
+                <button class="btn"><fa-icon
+                [icon]="faTrash"
+                [ngStyle]="{'#162856' : '#104040'}"
+                (click)="onDelete(persona)"
+                ></fa-icon></button>
+            </h1>
+            <h5>{{persona.mail}}</h5>
+                <div id="info-company">{{persona.position}}</div>
+                <div id="info-contact"><span>{{persona.ubication}}</span></div>
+                </div>
+                <div><ul id="info-details">
+                    <li><a href={{persona.companyUrl}}>
+                        <img [src]="persona.companyImg">
+                        <h4>{{persona.companyName}}</h4>
+                    </a></li></ul>
+                </div>
+    </div>
+</div>
+

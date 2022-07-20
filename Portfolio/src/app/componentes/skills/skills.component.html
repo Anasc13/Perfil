@@ -2,13 +2,13 @@
   <div class="skills">
     <div class="card-title">
       <h2>Skills</h2>
-    </div>
-    <app-add-skill (onAddSkills)="AddSkills($event)"></app-add-skill>
-    <app-item-skill
+      <app-add-skill (onAddSkills)="AddSkills($event)"></app-add-skill></div>
+  <div>  
+      <app-item-skill
     *ngFor="let skill of skillsList"
     [skill] = "skill"
     (OnDeleteSkills) = "deleteSkills(skill)">
-  </app-item-skill>
+  </app-item-skill> </div>
  </div>
 </div>
   

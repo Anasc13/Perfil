@@ -1,8 +1,3 @@
-export interface Banner {
-  backImage: string;
-  profileImage: string
-}
-
 export interface Persona {
     id?: number;
     nombre: string;
@@ -55,6 +50,7 @@ export interface Proyectos {
 export interface Skills {
   id?: number;
   name:string;
+  percentage: number;
   img:string;
 }
 

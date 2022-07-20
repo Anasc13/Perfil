@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { EditService } from 'src/app/service/edit.service';
 import { Education } from 'src/models/Interfaces';
 
+
 @Component({
   selector: 'app-add-education',
   templateUrl: './add-education.component.html',

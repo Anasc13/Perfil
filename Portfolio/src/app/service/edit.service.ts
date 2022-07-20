@@ -10,8 +10,11 @@ export class EditService {
   private showAddEducation:boolean = false;
   private subject = new Subject<any>();
   
-  private showAddAcerca:boolean = false;
+  private showEditarAcerca:boolean = false;
   private subject1 = new Subject<any>();
+
+  private showAddAcerca:boolean = false;
+  private subject6 = new Subject<any>();
 
   private showAddPersonas:boolean = false;
   private subject2 = new Subject<any>();
@@ -39,14 +42,24 @@ export class EditService {
   }
 
   //Acerca
-  toggleAddAcerca(): void {
-    this.showAddAcerca = !this.showAddAcerca;
-    this.subject1.next(this.showAddAcerca);
+  toggleEditAcerca(): void {
+    this.showEditarAcerca = !this.showEditarAcerca;
+    this.subject1.next(this.showEditarAcerca);
   }
 
-  onToggleAcerca(): Observable<any> {
+  onToggleEditAcerca(): Observable<any> {
     return this.subject1.asObservable();
   }
+
+  toggleAddAcerca(): void {
+    this.showAddAcerca = !this.showAddAcerca;
+    this.subject6.next(this.showAddAcerca);
+  }
+
+  onToggleAddAcerca(): Observable<any> {
+    return this.subject6.asObservable();
+  }
+
 
   //Personas
   toggleAddPersonas(): void {

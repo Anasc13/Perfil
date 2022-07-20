@@ -1,17 +1,21 @@
 <div class="skills">
   <div class="list-info">
-    <ul>
-      <li>
-        <h4>
+    <h5>
           {{skill.name}}
           <button class="btn"><fa-icon
             [icon]="faTrash"
             [ngStyle]="{'#162856' : '#104040'}"
             (click)="onDelete(skill)"
             ></fa-icon></button>
-        </h4>
+        </h5>
+    <ul>
+      <li><div class="Barra">
+        <div class="progress progress-striped">
+        <div class="progress-bar progress-bar-striped" id="bar" role="progressbar" [style.width]="skill.percentage+'%'" 
+        attr.aria-valuenow={{skill.percentage}} aria-valuemin="0" aria-valuemax="100" style="background-color:rgb(1, 20, 9)"></div>
+        </div>
+      </div>
       </li>
-      <li><img class="image-fluid" [src]="skill.img"></li>
         </ul>
     </div>
   </div>

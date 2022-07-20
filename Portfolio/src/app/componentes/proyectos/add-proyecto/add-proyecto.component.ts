@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { EditService } from 'src/app/service/edit.service';
 import { Proyectos } from 'src/models/Interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-proyecto',
@@ -23,6 +24,7 @@ export class AddProyectoComponent implements OnInit {
 
   constructor(
     private editService: EditService,
+    private router: Router, 
   ) {
     this.subscription = this.editService.onToggleProyectos()
                               .subscribe(value => this.showAddProyectos = value )
@@ -44,5 +46,9 @@ export class AddProyectoComponent implements OnInit {
 
 onToggleAddProyectos (){
   this.editService.toggleAddProyectos();
+}
+
+hasRoute(router: string){
+  return this.router.url === router
 }
 }

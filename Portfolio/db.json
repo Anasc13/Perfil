@@ -1,38 +1,26 @@
 {
-  "Banner": [
-    {
-      "backImage": "../assets/Images/bosques2.png",
-      "profileImage": "../assets/Images/Perfil_circle.JPG"
-    }
-  ],
   "Persona": [
     {
       "nombre": "Ana",
       "apellido": "Santa Cruz",
       "mail": "anasantacruz13@gmail.com",
       "position": "Analista de datos",
-      "ubication": "Salta (Argentina)",
+      "ubication": "Salta, Argentina",
       "companyName": "OVcM",
-      "companyImg": "../assets/Images/Logo_ovcm.png",
-      "ucompanyUrl": "http://ovcmsalta.gob.ar/"
+      "companyImg": "assets/Images/Logo_ovcm.png",
+      "companyUrl": "http://ovcmsalta.gob.ar/",
+      "id": 2
     }
   ],
   "Acerca": [
     {
-      "about": "Socióloga especialista en análisis y gestión de información cuantitativa y georreferenciada."
+      "about": "Socióloga especialista en análisis y gestión de información cuantitativa y georreferenciada.",
+      "id": 1
     }
   ],
   "Education": [
     {
-      "school": "Universidad de Buenos Aires",
-      "title": "Licenciada",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
-      "career": "Sociología",
-      "score": 8.7,
-      "start": 2003,
-      "end": 2008
-    },
-    {
+      "id": 2,
       "school": "Universidad de Buenos Aires",
       "title": "Magister",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
@@ -40,10 +28,21 @@
       "score": 0,
       "start": 2013,
       "end": "a la actualidad"
+    },
+    {
+      "school": "balba",
+      "title": "babab",
+      "img": "",
+      "career": "avbaba",
+      "score": "asdfasd",
+      "start": "asdfdasf",
+      "end": "asdfasdf",
+      "id": 3
     }
   ],
   "Experience": [
     {
+      "id": 1,
       "position": "Analista de datos",
       "company": "Observatorio de Violencia contra las Mujeres",
       "img": "assets/Images/Logo_ovcm.png",
@@ -53,8 +52,9 @@
       "timeElapsed": "3 años"
     }
   ],
-  "Projects": [
+  "Proyectos": [
     {
+      "id": 1,
       "img": "assets/Images/",
       "name": "Mi portfolio",
       "description": "Aplicación de cv para Argentina Programa",
@@ -63,6 +63,7 @@
       "link": "na"
     },
     {
+      "id": 2,
       "img": "assets/Images/",
       "name": "Vizualizaciones de resultados electorales",
       "description": "Procesamiento y elaboración de visualizaciones en lenguaje R de resultados electorales provinciales",
@@ -73,12 +74,22 @@
   ],
   "Skills": [
     {
-      "name": "Soft Skills",
+      "id": 1,
+      "name": "Typescript",
+      "percentage": "80",
       "img": "assets/Images/"
     },
     {
-      "name": "Hard skills",
+      "id": 2,
+      "name": "Resolución de problemas",
+      "percentage": "100",
       "img": "assets/Images/"
+    },
+    {
+      "name": "Vende humo",
+      "percentage": 10,
+      "img": "",
+      "id": 3
     }
   ]
 }

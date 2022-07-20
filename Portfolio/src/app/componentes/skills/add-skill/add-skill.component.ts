@@ -13,6 +13,7 @@ export class AddSkillComponent implements OnInit {
 
   id?: number;
   name:string= '';
+  percentage:number = 0;
   img:string= '';
   showAddSkills: boolean = false;
   subscription?: Subscription;
@@ -32,8 +33,8 @@ export class AddSkillComponent implements OnInit {
     alert('Please add a school!');
     return
   }
-  const { name, img }= this
-  const newSkill = { name, img }
+  const { name, percentage, img  }= this
+  const newSkill = { name, percentage, img  }
 
   this.onAddSkills.emit(newSkill);
 }

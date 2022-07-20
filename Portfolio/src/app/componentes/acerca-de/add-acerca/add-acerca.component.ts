@@ -1,8 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { EditService } from 'src/app/service/edit.service';
 import { Acerca } from 'src/models/Interfaces';
-import { FormBuilder, FormGroup} from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-acerca',
@@ -12,22 +11,18 @@ import { FormBuilder, FormGroup} from '@angular/forms';
 export class AddAcercaComponent implements OnInit {
   @Output() onAddAcerca: EventEmitter<Acerca> =new EventEmitter();
 
-  form: FormGroup;
-  about:  string = '';
+  id?: number;
+  about:string= '';
   showAddAcerca: boolean = false;
-  subscription?: Subscription; 
+
+  subscription?: Subscription;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private editService: EditService
-  ) {
-    this.form = formBuilder.group({
-      about:['',[]]
-    });
-    this.subscription = this.editService.onToggleAcerca()
+    private editService: EditService) {
+      this.subscription = this.editService.onToggleAddAcerca()
                               .subscribe(value => this.showAddAcerca = value )
-   }
-
+     }
+  
   ngOnInit(): void {
   }
 
@@ -36,10 +31,13 @@ export class AddAcercaComponent implements OnInit {
     alert('Agregue descripción!');
     return
   }
-  const { about }= this
-  const newAcerca = { about }
-
+  const { about }= this;
+  const newAcerca = { about };
   this.onAddAcerca.emit(newAcerca);
 }
 
+
+OnToggleAddAcerca(){
+  this.editService.toggleAddAcerca();
+  }
 }
