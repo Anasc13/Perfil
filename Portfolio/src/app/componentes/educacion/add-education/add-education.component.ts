@@ -17,9 +17,9 @@ export class AddEducationComponent implements OnInit {
   title:string= '';
   img:string= '';
   career:string= '';
-  score:string= '';
-  start:string= '';
-  end:string= '';
+  score:number= 0;
+  start:number= 0;
+  end:number= 0;
   showAddEducation: boolean = false;
   subscription?: Subscription;
 

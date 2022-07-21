@@ -27,16 +27,16 @@
       "career": "Maestría en Políticas Ambientales y Territoriales",
       "score": 0,
       "start": 2013,
-      "end": "a la actualidad"
+      "end": 2002
     },
     {
       "school": "balba",
       "title": "babab",
       "img": "",
       "career": "avbaba",
-      "score": "asdfasd",
-      "start": "asdfdasf",
-      "end": "asdfasdf",
+      "score": 100,
+      "start": 0,
+      "end": 0,
       "id": 3
     }
   ],
@@ -47,8 +47,8 @@
       "company": "Observatorio de Violencia contra las Mujeres",
       "img": "assets/Images/Logo_ovcm.png",
       "mode": "part-time",
-      "start": "2019",
-      "end": "a la actualidad",
+      "start": 2019,
+      "end": 2022,
       "timeElapsed": "3 años"
     }
   ],
@@ -76,19 +76,16 @@
     {
       "id": 1,
       "name": "Typescript",
-      "percentage": "80",
-      "img": "assets/Images/"
+      "percentage": 80
     },
     {
       "id": 2,
       "name": "Resolución de problemas",
-      "percentage": "100",
-      "img": "assets/Images/"
+      "percentage": 100
     },
     {
       "name": "R language",
       "percentage": 80,
-      "img": "",
       "id": 4
     }
   ]

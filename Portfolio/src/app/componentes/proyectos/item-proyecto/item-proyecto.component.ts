@@ -13,17 +13,17 @@ import { Subscription } from 'rxjs';
 export class ItemProyectoComponent implements OnInit {
   @Output() OnDeleteProyectos: EventEmitter<Proyectos> = new EventEmitter();
   @Output() OnEditProyectos: EventEmitter<Proyectos> = new EventEmitter();
-  @Input()  proyecto: Proyectos= { name:"", description:"", img:"", start:"", finish:"", link:"" }
+  @Input()  proyecto: Proyectos= { name:"", description:"", img:"", start:0, finish:0, link:"" }
 
   faTrash = faTrash;
   
   id?:number;
-  name=this.proyecto.name;
-  description=this.proyecto.description;
-  img=this.proyecto.img;
-  start=this.proyecto.start;
-  finish=this.proyecto.finish;
-  link=this.proyecto.link;
+  name:string=this.proyecto.name;
+  description:string=this.proyecto.description;
+  img:string=this.proyecto.img;
+  start: number=this.proyecto.start;
+  finish: number=this.proyecto.finish;
+  link:string=this.proyecto.link;
 
   subscription?: Subscription;
   showEditProyectos: boolean = false;

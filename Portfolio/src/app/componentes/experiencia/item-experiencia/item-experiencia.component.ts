@@ -12,17 +12,17 @@ import { Subscription } from 'rxjs';
 export class ItemExperienciaComponent implements OnInit {
   @Output() OnDeleteExperience: EventEmitter<Experience> = new EventEmitter()
   @Output() onEditExperience: EventEmitter<Experience> =new EventEmitter();
-  @Input()  experience: Experience= { position:"", company:"", img:"", mode:"", start:"", end:"", timeElapsed:"" }
+  @Input()  experience: Experience= { position:"", company:"", img:"", mode:"", start:0, end:0, timeElapsed:"" }
   
   
   faTrash = faTrash;
-  position=this.experience.position;
-  company=this.experience.company;
-  img=this.experience.img;
-  mode=this.experience.mode;
-  start=this.experience.start;
-  end=this.experience.end;
-  timeElapsed=this.experience.timeElapsed;
+  position: string=this.experience.position;
+  company: string=this.experience.company;
+  img: string=this.experience.img;
+  mode: string=this.experience.mode;
+  start:number=this.experience.start;
+  end:number=this.experience.end;
+  timeElapsed: string=this.experience.timeElapsed;
 
   subscription?: Subscription;
   showEditExperience: boolean = false;

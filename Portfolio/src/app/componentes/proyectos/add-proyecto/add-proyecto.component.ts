@@ -16,8 +16,8 @@ export class AddProyectoComponent implements OnInit {
   img:string= '';
   name:string= '';
   description:string= '';
-  start:string= '';
-  finish:string= '';
+  start:number= 0;
+  finish:number= 0;
   link:string= '';
   showAddProyectos: boolean = false;
   subscription?: Subscription;

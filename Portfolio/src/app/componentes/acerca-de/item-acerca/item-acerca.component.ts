@@ -17,7 +17,7 @@ export class ItemAcercaComponent implements OnInit {
   
   faTrash = faTrash;
   id?:number;
-  about=this.acerca.about;
+  about:string=this.acerca.about;
   subscription?: Subscription;
   showEditarAcerca: boolean = false;
 

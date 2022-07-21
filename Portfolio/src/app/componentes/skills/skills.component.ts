@@ -37,6 +37,9 @@ export class SkillsComponent implements OnInit {
   )}
 
   EditarSkills (skill:Skills){
-    this.personaService.UpdateSkills(skill)
+    this.personaService.UpdateSkills(skill).subscribe(()=>(
+      this.skillsList = this.skillsList.filter
+      (t => t.id !== skill.id )
+    ))
   }
 }
