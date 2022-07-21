@@ -1,22 +1,59 @@
 <div class="education">
   <div class="logo-image-container">
-    <img class="logo-image" [src]="education.img">
-  </div>
+    <img class="logo-image" [src]="education.img"></div>
 <div class="list-info">
-  <ul>
-    <li>
-      <h4>
-        {{education.title}} en {{education.career}}
-        <button class="btn"><fa-icon
-          [icon]="faTrash"
-          [ngStyle]="{'#162856' : '#104040'}"
-          (click)="onDelete(education)"
-          ></fa-icon></button>
-      </h4>
-    </li>
+  <ul><li>
+    <h4>{{education.title}} en {{education.career}}
+      <button class="btn"><fa-icon
+        [icon]="faTrash"
+        [ngStyle]="{'#162856' : '#104040'}"
+        (click)="onDelete(education)"></fa-icon></button>
+        <app-button-edit
+        color = "{{ showEditEducation ? '#162856' : '#104040' }}"
+        (btnClick)="onToggleEditEducation()"></app-button-edit></h4>
+  </li>
       <p>{{education.school}}</p>
       <p>Promedio: {{education.score}}</p>
       <p>Año de inicio: {{education.start}}</p>
-      </ul>
-  </div>
+    </ul>
+</div>
+<form class="container" 
+(ngSubmit)="onSubmit()"
+*ngIf="showEditEducation">
+<input type="text" id="edit"
+placeholder="Agregue institución"
+[(ngModel)]="education.school" [ngModelOptions]="{standalone: true}"
+value="{{education.school}}"/>
+  
+<input type="text" id="edit"
+placeholder="Agregue título" 
+[(ngModel)]="education.title" [ngModelOptions]="{standalone: true}"
+value="{{education.title}}"/>
+    
+<input type="text" id="edit"
+placeholder="Agregue carrera" 
+[(ngModel)]="education.career"[ngModelOptions]="{standalone: true}"
+value="{{education.career}}"/>
+   
+<input type="text" id="edit"
+placeholder="Agregue promedio" 
+[(ngModel)]="education.score"[ngModelOptions]="{standalone: true}"
+value="{{education.score}}"/>
+   
+<input type="text" id="edit"
+placeholder="Agregue año" 
+[(ngModel)]="education.start"[ngModelOptions]="{standalone: true}"
+value="{{education.start}}"/>
+  
+<input type="text" id="edit"
+placeholder="Agregue año" 
+[(ngModel)]="education.end" [ngModelOptions]="{standalone: true}"
+value="{{education.end}}"/>
+   
+<input type="text" id="edit"
+placeholder="Agregue ruta de imagen" 
+[(ngModel)]="education.img"[ngModelOptions]="{standalone: true}"
+value="{{education.img}}"/>
+
+</form>
 </div>

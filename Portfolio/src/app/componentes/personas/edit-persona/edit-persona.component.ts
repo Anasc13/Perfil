@@ -25,8 +25,8 @@ export class EditPersonaComponent implements OnInit {
   showAddPersonas: boolean = false;
 
   constructor(
-    private editService:EditService) 
-  { this.subscription = this.editService.onTogglePersonas()
+    private editService:EditService)  
+  { this.subscription = this.editService.onToggleAddPersonas()
     .subscribe(value => this.showAddPersonas = value ) }
   
   ngOnInit(): void {

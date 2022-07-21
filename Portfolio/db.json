@@ -55,7 +55,7 @@
   "Proyectos": [
     {
       "id": 1,
-      "img": "assets/Images/",
+      "img": "assets/Images/pino.png",
       "name": "Mi portfolio",
       "description": "Aplicación de cv para Argentina Programa",
       "start": 2022,
@@ -64,7 +64,7 @@
     },
     {
       "id": 2,
-      "img": "assets/Images/",
+      "img": "assets/Images/urna.jpg",
       "name": "Vizualizaciones de resultados electorales",
       "description": "Procesamiento y elaboración de visualizaciones en lenguaje R de resultados electorales provinciales",
       "start": 2020,
@@ -86,10 +86,10 @@
       "img": "assets/Images/"
     },
     {
-      "name": "Vende humo",
-      "percentage": 10,
+      "name": "R language",
+      "percentage": 80,
       "img": "",
-      "id": 3
+      "id": 4
     }
   ]
 }

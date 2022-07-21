@@ -32,4 +32,12 @@ export class ExperienciaComponent implements OnInit {
   this.personaService.AddExperience(experience).subscribe((experience)=>( 
     this.experienceList.push(experience))
   )}
+
+  EditarEducation (experience:Experience){
+    this.personaService.UpdateExperience(experience).subscribe(()=>(
+      this.experienceList = this.experienceList.filter
+      (t => t.id !== experience.id )
+    ))
+  }
+
 }

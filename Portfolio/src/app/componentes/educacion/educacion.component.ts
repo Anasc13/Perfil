@@ -31,6 +31,12 @@ export class EducacionComponent implements OnInit {
   this.personaService.AddEducation(education).subscribe((education)=>( 
     this.educationList.push(education))
   )}
-  
-  
+
+  EditarEducation (education:Education){
+    this.personaService.UpdateEducation(education).subscribe(()=>(
+      this.educationList = this.educationList.filter
+      (t => t.id !== education.id )
+    ))
+  }
+    
 }

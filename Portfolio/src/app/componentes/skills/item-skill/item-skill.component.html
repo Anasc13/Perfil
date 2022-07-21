@@ -7,7 +7,11 @@
             [ngStyle]="{'#162856' : '#104040'}"
             (click)="onDelete(skill)"
             ></fa-icon></button>
-        </h5>
+            <app-button-edit
+            color = "{{ showEditSkills ? '#162856' : '#104040' }}"
+            (btnClick)="onToggleEditSkill()"
+            ></app-button-edit>
+          </h5>
     <ul>
       <li><div class="Barra">
         <div class="progress progress-striped">
@@ -18,4 +22,22 @@
       </li>
         </ul>
     </div>
-  </div>
+    <form class="container" 
+(ngSubmit)="onSubmit(skill)"
+*ngIf="showEditSkills" 
+>
+<input type="text"
+placeholder="Agregue tipo"
+[(ngModel)]="skill.name" [ngModelOptions]="{standalone: true}"
+value="{{skill.name}}"/>
+
+<input type="number" 
+placeholder="Agregue porcentaje"
+[(ngModel)]="skill.percentage" [ngModelOptions]="{standalone: true}"
+value="{{skill.percentage}}"/>
+
+<div class="form-control-buttons">
+  <input type="submit" value="Guardar cambios" class="btn btn-block">
+</div>
+</form>
+</div>

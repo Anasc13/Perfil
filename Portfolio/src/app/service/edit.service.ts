@@ -7,17 +7,15 @@ import { Observable, Subject} from 'rxjs';
 
 export class EditService {
 
-  private showAddEducation:boolean = false;
-  private subject = new Subject<any>();
-  
-  private showEditarAcerca:boolean = false;
-  private subject1 = new Subject<any>();
-
+  //Add
   private showAddAcerca:boolean = false;
   private subject6 = new Subject<any>();
 
   private showAddPersonas:boolean = false;
   private subject2 = new Subject<any>();
+ 
+  private showAddEducation:boolean = false;
+  private subject = new Subject<any>();
 
   private showAddExperience:boolean = false;
   private subject3 = new Subject<any>();
@@ -28,6 +26,24 @@ export class EditService {
   private showAddSkills:boolean = false;
   private subject5 = new Subject<any>();
   
+  //Edit
+  private showEditarAcerca:boolean = false;
+  private subject1 = new Subject<any>();
+
+  private showEditPersonas:boolean = false;
+  private subject7 = new Subject<any>();  
+
+  private showEditEducation:boolean = false;
+  private subject8 = new Subject<any>();
+
+  private showEditExperience:boolean = false;
+  private subject9 = new Subject<any>();
+
+  private showEditProyectos:boolean = false;
+  private subject10 = new Subject<any>();
+
+  private showEditSkills:boolean = false;
+  private subject11 = new Subject<any>();
 
   constructor() { }
 
@@ -37,8 +53,17 @@ export class EditService {
     this.subject.next(this.showAddEducation);
   }
 
-  onToggleEducation(): Observable<any> {
+  onToggleAddEducation(): Observable<any> {
     return this.subject.asObservable();
+  }
+
+  toggleEditEducation(): void {
+    this.showEditEducation = !this.showEditEducation;
+    this.subject8.next(this.showEditEducation);
+  }
+
+  onToggleEditEducation(): Observable<any> {
+    return this.subject8.asObservable();
   }
 
   //Acerca
@@ -60,15 +85,23 @@ export class EditService {
     return this.subject6.asObservable();
   }
 
-
   //Personas
   toggleAddPersonas(): void {
     this.showAddPersonas = !this.showAddPersonas;
     this.subject2.next(this.showAddPersonas);
   }
 
-  onTogglePersonas(): Observable<any> {
+  onToggleAddPersonas(): Observable<any> {
     return this.subject2.asObservable();
+  }
+
+  toggleEditPersonas(): void {
+    this.showEditPersonas = !this.showEditPersonas;
+    this.subject7.next(this.showEditPersonas);
+  }
+
+  onToggleEditPersonas(): Observable<any> {
+    return this.subject7.asObservable();
   }
 
   //Experience
@@ -77,26 +110,54 @@ export class EditService {
     this.subject3.next(this.showAddExperience);
   }
 
-  onToggleExperience(): Observable<any> {
+  onToggleAddExperience(): Observable<any> {
     return this.subject3.asObservable();
   }
 
-   //Experience
+  toggleEditExperience(): void {
+    this.showEditExperience = !this.showEditExperience;
+    this.subject9.next(this.showEditExperience);
+  }
+
+  onToggleEditExperience(): Observable<any> {
+    return this.subject9.asObservable();
+  }
+
+  //Proyectos
    toggleAddProyectos(): void {
     this.showAddProyectos = !this.showAddProyectos;
     this.subject4.next(this.showAddProyectos);
   }
 
-  onToggleProyectos(): Observable<any> {
+  onToggleAddProyectos(): Observable<any> {
     return this.subject4.asObservable();
   }
-    //Skills
+
+  toggleEditProyectos(): void {
+    this.showEditProyectos = !this.showEditProyectos;
+    this.subject10.next(this.showEditProyectos);
+  }
+
+  onToggleEditProyectos(): Observable<any> {
+    return this.subject10.asObservable();
+  }
+
+  //Skills
     toggleAddSkills(): void {
       this.showAddSkills = !this.showAddSkills;
       this.subject5.next(this.showAddSkills);
     }
   
-    onToggleSkills(): Observable<any> {
+    onToggleAddSkills(): Observable<any> {
       return this.subject5.asObservable();
+    } 
+
+    toggleEditSkills(): void {
+      this.showEditSkills = !this.showEditSkills;
+      this.subject11.next(this.showEditSkills);
+    }
+  
+    onToggleEditSkills(): Observable<any> {
+      return this.subject11.asObservable();
     } 
 }

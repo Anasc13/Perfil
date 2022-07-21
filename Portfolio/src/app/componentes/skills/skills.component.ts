@@ -8,6 +8,10 @@ import { Skills } from 'src/models/Interfaces';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+  
+  skills: Skills= { name:"", percentage: 0, img:"" }
+  indice:number = -1;
+  showEdicionSkill:boolean=false;
   skillsList: Skills[] = [];
 
  constructor(private personaService:PersonaService) { }
@@ -32,4 +36,7 @@ export class SkillsComponent implements OnInit {
     this.skillsList.push(skill))
   )}
 
+  EditarSkills (skill:Skills){
+    this.personaService.UpdateSkills(skill)
+  }
 }

@@ -66,10 +66,13 @@ export class PersonaService {
     const url=`${this.apiUrl}/${persona.id}`
     return this.http.delete<Persona>(url);
   }
-  
 
-  AddPers(persona: Persona): Observable<Persona>{
+  AddPersona(persona: Persona): Observable<Persona>{
     return this.http.post<Persona>(this.apiUrl,persona,httpOptions);
+  }
+
+  UpdatePersona(persona: Persona): Observable<Persona>{
+    return this.http.put<Persona>(this.apiUrl, persona, httpOptions);
   }
 
   //Education
@@ -86,6 +89,10 @@ export class PersonaService {
     return this.http.post<Education>(this.apiUrl3, education, httpOptions);
   }
 
+  UpdateEducation(education:Education): Observable<Education>{
+    return this.http.put<Education>(this.apiUrl3, education, httpOptions);
+  }
+
   //experience
   getExperience(): Observable<Experience[]> {
     return this.http.get<Experience[]>(this.apiUrl4)
@@ -98,6 +105,10 @@ export class PersonaService {
 
   AddExperience(experience:Experience): Observable<Experience>{
     return this.http.post<Experience>(this.apiUrl4, experience, httpOptions);
+  }
+
+  UpdateExperience(experience:Experience): Observable<Experience>{
+    return this.http.put<Experience>(this.apiUrl4, experience, httpOptions);
   }
 
   //Proyectos
@@ -114,6 +125,10 @@ export class PersonaService {
     return this.http.post<Proyectos>(this.apiUrl5, proyecto, httpOptions);
   }
 
+  UpdateProyectos(proyecto:Proyectos): Observable<Proyectos>{
+    return this.http.put<Proyectos>(this.apiUrl5, proyecto, httpOptions);
+  }
+
   //Skills
   getSkills(): Observable<Skills[]> {
     return this.http.get<Skills[]>(this.apiUrl6)
@@ -128,5 +143,9 @@ export class PersonaService {
     return this.http.post<Skills>(this.apiUrl6, skill, httpOptions);
   }
 
+  UpdateSkills(skill:Skills): Observable<Skills>{
+    return this.http.put<Skills>(this.apiUrl6, skill, httpOptions);
+  }
 
+ 
 }

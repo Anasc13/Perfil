@@ -1,4 +1,4 @@
-<div class="education">
+<div class="proyecto">
     <div class="logo-image-container">
       <img class="logo-image" [src]="proyecto.img">
     </div>
@@ -12,7 +12,10 @@
             [ngStyle]="{'#162856' : '#104040'}"
             (click)="onDelete(proyecto)"
             ></fa-icon></button>
-        </h4>
+            <app-button-edit
+            color = "{{ showEditProyectos ? '#162856' : '#104040' }}"
+            (btnClick)="onToggleEditProyectos()"></app-button-edit>
+          </h4>
         <p>{{proyecto.description}}</p>
       </li>
         <p>Año de inicio: {{proyecto.start}}</p>
@@ -20,4 +23,42 @@
         <p>{{proyecto.link}}</p>
         </ul>
     </div>
-  </div>
+<form class="container" 
+(ngSubmit)="onSubmit()"
+*ngIf="showEditProyectos" 
+>
+<input type="text" id="edit"
+placeholder="Agregue nombre"
+[(ngModel)]="proyecto.name" [ngModelOptions]="{standalone: true}"
+value="{{proyecto.name}}"/>
+
+<input type="text" id="edit"
+placeholder="Agregue descripcion" 
+[(ngModel)]="proyecto.description" [ngModelOptions]="{standalone: true}"
+value="{{proyecto.description}}"/>
+
+<input type="text" id="edit"
+placeholder="Agregue ruta de imagen"
+[(ngModel)]="proyecto.img" [ngModelOptions]="{standalone: true}"
+value="{{proyecto.img}}"/>
+
+<input type="text" id="edit"
+placeholder="Agregue año" 
+[(ngModel)]="proyecto.start" [ngModelOptions]="{standalone: true}"
+value="{{proyecto.start}}"/>
+
+<input type="text" id="edit"
+placeholder="Agregue año" 
+[(ngModel)]="proyecto.finish" [ngModelOptions]="{standalone: true}"
+value="{{proyecto.finish}}"/>
+
+<input type="text" id="edit"
+placeholder="Agregue link" 
+[(ngModel)]="proyecto.link" [ngModelOptions]="{standalone: true}"
+value="{{proyecto.link}}"/>
+
+<div class="form-control-buttons">
+  <input type="submit" value="Guardar cambios" class="btn btn-block">
+</div>
+</form>
+</div>

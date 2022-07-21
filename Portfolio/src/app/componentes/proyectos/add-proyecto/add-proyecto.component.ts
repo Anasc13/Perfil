@@ -23,10 +23,10 @@ export class AddProyectoComponent implements OnInit {
   subscription?: Subscription;
 
   constructor(
-    private editService: EditService,
+    private editService: EditService, 
     private router: Router, 
   ) {
-    this.subscription = this.editService.onToggleProyectos()
+    this.subscription = this.editService.onToggleAddProyectos()
                               .subscribe(value => this.showAddProyectos = value )
    }
 

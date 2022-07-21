@@ -32,4 +32,10 @@ export class ProyectosComponent implements OnInit {
     this.proyectosList.push(proyecto))
   )}
 
+  EditarProyectos (proyecto:Proyectos){
+    this.personaService.UpdateProyectos(proyecto).subscribe(()=>(
+      this.proyectosList = this.proyectosList.filter
+      (t => t.id !== proyecto.id )
+    ))
+  }
 }

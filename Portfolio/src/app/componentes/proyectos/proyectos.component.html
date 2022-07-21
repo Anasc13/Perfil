@@ -7,7 +7,8 @@
         <app-item-proyecto 
         *ngFor="let proyecto of proyectosList"
         [proyecto] = "proyecto"
-        (OnDeleteEducation) = "deleteProyectos(proyecto)">
+        (OnDeleteProyectos) = "deleteProyectos(proyecto)"
+        (OnEditProyectos)="EditarProyectos($event)">
       </app-item-proyecto>
     </div>
   </div>

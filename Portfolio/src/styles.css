@@ -54,7 +54,8 @@ div#Logo-AP img{
     width: 10%;
 }
 
-div#social-media {    
+div#social-media {  
+    display: inline-block;  
     margin-right: -22%;
     margin-top: 5px;
     margin-bottom: 5px;

@@ -7,7 +7,8 @@
       <app-item-skill
     *ngFor="let skill of skillsList"
     [skill] = "skill"
-    (OnDeleteSkills) = "deleteSkills(skill)">
+    (OnDeleteSkills) = "deleteSkills(skill)"
+    (onEditSkills)="EditarSkills($event)">
   </app-item-skill> </div>
  </div>
 </div>

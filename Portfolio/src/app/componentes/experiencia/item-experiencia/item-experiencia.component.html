@@ -12,13 +12,44 @@
             [ngStyle]="{'#162856' : '#104040'}"
             (click)="onDelete(experience)"
             ></fa-icon></button>
+            <app-button-edit
+            color = "{{ showEditExperience ? '#162856' : '#104040' }}"
+            (btnClick)="onToggleEditExperience()"></app-button-edit>
         </h4>
       </li>
         <p>{{experience.mode}}</p>
-        <p>Promedio: {{experience.score}}</p>
         <p>Año de inicio: {{experience.start}}</p>
-        <p>Año de inicio: {{experience.end}}</p>
-        <p>Año de inicio: {{experience.timeElapsed}}</p>
-        </ul>
-    </div>
+        <p>Año de finalización: {{experience.end}}</p>
+        <p>Duración: {{experience.timeElapsed}}</p>
+    </ul>
   </div>
+<form class="container" 
+(ngSubmit)="onSubmit()"
+*ngIf="showEditExperience" 
+>
+<input type="text" id="edit"
+placeholder="Agregue posición"
+[(ngModel)]="experience.position"[ngModelOptions]="{standalone: true}"
+value="{{experience.position}}"/>
+<input type="text" id="edit"
+placeholder="Agregue empresa" 
+[(ngModel)]="experience.company"[ngModelOptions]="{standalone: true}"
+value="{{experience.company}}"/>
+<input type="text" id="edit"
+placeholder="Agregue modalidad" 
+[(ngModel)]="experience.mode"[ngModelOptions]="{standalone: true}"
+value="{{experience.mode}}"/>
+<input type="text" id="edit"
+placeholder="Agregue año" 
+[(ngModel)]="experience.start"[ngModelOptions]="{standalone: true}"
+value="{{experience.start}}"/>
+<input type="text" id="edit"
+placeholder="Agregue año" 
+[(ngModel)]="experience.end"[ngModelOptions]="{standalone: true}"
+value="{{experience.end}}"/>
+<input type="text" id="edit"
+placeholder="Agregue tiempo de duración" 
+[(ngModel)]="experience.timeElapsed"[ngModelOptions]="{standalone: true}"
+value="{{experience.timeElapsed}}"/>
+</form>
+</div>

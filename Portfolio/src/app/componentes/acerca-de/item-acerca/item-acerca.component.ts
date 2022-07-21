@@ -47,5 +47,5 @@ export class ItemAcercaComponent implements OnInit {
   
   OnToggleeditAcerca(){
     this.editService.toggleEditAcerca();
-    }
+    } 
 }

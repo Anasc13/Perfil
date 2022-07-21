@@ -26,7 +26,7 @@ export class AddExperienciaComponent implements OnInit {
   constructor(
     private editService: EditService,
   ) {
-    this.subscription = this.editService.onToggleExperience()
+    this.subscription = this.editService.onToggleAddExperience()
                               .subscribe(value => this.showAddExperience = value )
    }
 

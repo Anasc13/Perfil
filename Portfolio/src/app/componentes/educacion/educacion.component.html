@@ -7,8 +7,9 @@
       <app-item-educacion 
       *ngFor="let education of educationList"
       [education] = "education"
-      (OnDeleteEducation) = "deleteEducation(education)">
+      (OnDeleteEducation) = "deleteEducation(education)"
+      (onEditEducation)="EditarEducation($event)">
     </app-item-educacion>
   </div>
-</div>
+</div> 
 

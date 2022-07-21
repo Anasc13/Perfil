@@ -5,13 +5,12 @@
             <div id="info-img">
                 <img class="profile-image rounded-circle" src="../assets/Images/Perfil_circle.JPG" alt="Foto_pefil">
             </div>
-            <app-edit-persona
-            (OnAddPersona)="AddPersona($event)">
-        </app-edit-persona>
+            <app-edit-persona (OnAddPersona)="AddPersona($event)"></app-edit-persona>
         <app-item-persona
             *ngFor="let persona of personaList"
             [persona] = "persona"
-            (OnDeletePersona)="deletePersonas(persona)">
+            (OnDeletePersona)="deletePersonas(persona)"
+            (onEditPersona)="EditarPersona($event)">
         </app-item-persona>
     </div>
 </div>

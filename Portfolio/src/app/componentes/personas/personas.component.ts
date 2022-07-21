@@ -20,9 +20,16 @@ export class PersonasComponent implements OnInit {
     }
    
     AddPersona(persona: Persona){    
-      this.personaService.AddPers(persona).subscribe((persona)=>( 
+      this.personaService.AddPersona(persona).subscribe((persona)=>( 
       this.personaList.push(persona))
     )}
+
+    EditarPersona (persona: Persona){
+      this.personaService.UpdatePersona(persona).subscribe(()=>(
+        this.personaList = this.personaList.filter
+        (t => t.id !== persona.id )
+      ))
+    }
     
     deletePersonas(persona: Persona){
       this.personaService.deletePersonas(persona)

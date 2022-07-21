@@ -21,7 +21,7 @@ export class AddSkillComponent implements OnInit {
   constructor(
     private editService: EditService,
   ) {
-    this.subscription = this.editService.onToggleSkills()
+    this.subscription = this.editService.onToggleAddSkills()
                               .subscribe(value => this.showAddSkills = value )
    }
 
@@ -30,12 +30,12 @@ export class AddSkillComponent implements OnInit {
 
   onSubmit(){
   if(this.name.length == 0){
-    alert('Please add a school!');
+    alert('Please add a name!');
     return
   }
   const { name, percentage, img  }= this
   const newSkill = { name, percentage, img  }
-
+  
   this.onAddSkills.emit(newSkill);
 }
 
