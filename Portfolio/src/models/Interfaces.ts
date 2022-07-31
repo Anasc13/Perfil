@@ -50,12 +50,5 @@ export interface Proyectos {
 export interface Skills {
   id?: number;
   name:string;
-  percentage: number;
-  img:string;
-}
-
-export interface LogIn {
-  id?: number;
-  email:string;
-  password:string;
+  percentage: number
 }

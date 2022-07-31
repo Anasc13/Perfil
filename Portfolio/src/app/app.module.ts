@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +29,9 @@ import { ItemSkillComponent } from './componentes/skills/item-skill/item-skill.c
 import { ItemPersonaComponent } from './componentes/personas/item-persona/item-persona.component';
 import { ItemAcercaComponent } from './componentes/acerca-de/item-acerca/item-acerca.component';
 import { ButtonEditComponent } from './componentes/button-edit/button-edit.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { PersonaService } from './service/persona.service';
+import { InterceptorService } from './service/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,7 @@ import { ButtonEditComponent } from './componentes/button-edit/button-edit.compo
     ItemPersonaComponent,
     ItemAcercaComponent,
     ButtonEditComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +68,9 @@ import { ButtonEditComponent } from './componentes/button-edit/button-edit.compo
     FontAwesomeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PersonaService, 
+  { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true }
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

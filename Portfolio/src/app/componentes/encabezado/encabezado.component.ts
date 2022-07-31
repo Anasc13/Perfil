@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LogInService } from 'src/app/service/log-in.service';
+import { LogInService } from 'src/app/service/log-in.service'
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-
 
 @Component({
   selector: 'app-encabezado',
@@ -10,26 +8,21 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
- 
-  showLogIn: boolean = false;
-  subscription?: Subscription;
 
   constructor(
-    private router: Router, 
-    private loginService:LogInService) 
-    {     
-      this.subscription = this.loginService.onToggleLogIn()
-      .subscribe((value) => this.showLogIn = value )}
+    private logInService: LogInService,
+    private ruta:Router ) 
+    { }
 
   ngOnInit(): void {
      }
 
-  hasRoute(router: string){
-      return this.router.url === router
-    }
-  
-  OnToggleLogIn (){
-    this.loginService.toggleLogIn();
-  }   
-  
-}
+logout(event:Event){
+  event.preventDefault;
+  this.logInService.CerrarSesion();
+  this.ruta.navigate(['/login']) }
+
+}   
+
+
+

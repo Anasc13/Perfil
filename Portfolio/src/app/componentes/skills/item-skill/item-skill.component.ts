@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class ItemSkillComponent implements OnInit {
   @Output() OnDeleteSkills: EventEmitter<Skills> = new EventEmitter()
   @Output() onEditSkills: EventEmitter<Skills> = new EventEmitter()
-  @Input()  skill: Skills= { name:"", percentage: 0, img:"" }
+  @Input()  skill: Skills= { name:"", percentage: 0 }
   
   showEditSkills: boolean = false;
   faTrash = faTrash;
@@ -20,7 +20,7 @@ export class ItemSkillComponent implements OnInit {
   id=this.skill.id;
   name: string=this.skill.name;
   percentage: number=this.skill.percentage;
-  img: string=this.skill.img;
+  
    
   subscription?: Subscription;
   
@@ -41,8 +41,8 @@ export class ItemSkillComponent implements OnInit {
       alert('Agregue habilidad!');
       return
     }
-    const { name, percentage, img } = this
-    const editSkill = { name, percentage, img }
+    const { name, percentage } = this
+    const editSkill = { name, percentage }
     this.onEditSkills.emit(editSkill);
     this.showEditSkills!=this.showEditSkills;
   }  
