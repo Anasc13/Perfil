@@ -33,33 +33,33 @@
   "Experience": [
     {
       "id": 1,
-      "position": "Analista de datos",
-      "company": "Observatorio de Violencia contra las Mujeres",
-      "img": "assets/Images/Logo_ovcm.png",
-      "mode": "part-time",
-      "start": "2019",
-      "end": "a la actualidad",
+      "position":"Analista de datos",
+      "company":"Observatorio de Violencia contra las Mujeres",
+      "img":"assets/Images/Logo_ovcm.png",
+      "mode":"part-time",
+      "start":"2019",
+      "end":"a la actualidad",
       "timeElapsed": "3 años"
     }
   ],
   "Proyectos": [
     {
       "id": 1,
-      "img": "assets/Images/pino.png",
-      "name": "Mi portfolio",
-      "description": "Aplicación de cv para Argentina Programa",
-      "start": 2022,
-      "finish": 2022,
-      "link": "https://portfolio-8b019.web.app/"
+      "img": "assets/Images/",
+        "name":"Mi portfolio",
+        "description": "Aplicación de cv para Argentina Programa",
+        "start": "2022",
+        "end": "2022",
+        "link": "https://portfolio-8b019.web.app/"
     },
     {
       "id": 2,
-      "img": "assets/Images/urna.jpg",
-      "name": "Vizualizaciones de resultados electorales",
+      "img": "assets/Images/",
+      "name":"Vizualizaciones de resultados electorales",
       "description": "Procesamiento y elaboración de visualizaciones en lenguaje R de resultados electorales provinciales",
-      "start": 2020,
-      "finish": 2022,
-      "link": "na"
+      "start": "2020",
+      "end": "2022",
+      "link": "sin respositorio virtual"
     }
   ],
   "Skills": [

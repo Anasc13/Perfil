@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class ItemProyectoComponent implements OnInit {
   @Output() OnDeleteProyectos: EventEmitter<Proyectos> = new EventEmitter();
   @Output() OnEditProyectos: EventEmitter<Proyectos> = new EventEmitter();
-  @Input()  proyecto: Proyectos= { name:"", description:"", img:"", start:0, finish:0, link:"" }
+  @Input()  proyecto: Proyectos= { name:"", description:"", img:"", start:"", end:"", link:"" }
 
   faTrash = faTrash;
   
@@ -21,8 +21,8 @@ export class ItemProyectoComponent implements OnInit {
   name:string=this.proyecto.name;
   description:string=this.proyecto.description;
   img:string=this.proyecto.img;
-  start: number=this.proyecto.start;
-  finish: number=this.proyecto.finish;
+  start: string=this.proyecto.start;
+  end: string=this.proyecto.end;
   link:string=this.proyecto.link;
 
   subscription?: Subscription;
@@ -44,8 +44,8 @@ export class ItemProyectoComponent implements OnInit {
       alert('Agregue institución!');
       return
     }
-    const { name, description, img, start, finish, link } = this;
-    const newProyecto = { name, description, img, start, finish, link };
+    const { name, description, img, start, end, link } = this;
+    const newProyecto = { name, description, img, start, end, link };
     this.OnEditProyectos.emit(newProyecto);
   }  
   

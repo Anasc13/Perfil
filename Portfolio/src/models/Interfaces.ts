@@ -21,9 +21,9 @@ export interface Education {
   title:string;
   img:string;
   career:string;
-  score:number;
-  start:number;
-  end:number;
+  score:string;
+  start: string;
+  end:string;
 }
 
 export interface Experience {
@@ -32,8 +32,8 @@ export interface Experience {
   company:string;
   img:string;
   mode:string;
-  start:number;
-  end:number;
+  start: string;
+  end:string;
   timeElapsed:string;
 }
 
@@ -42,13 +42,13 @@ export interface Proyectos {
   img:string;
   name:string;
   description:string;
-  start:number;
-  finish:number;
+  start: string;
+  end:string;
   link:string;
 }
 
 export interface Skills {
   id?: number;
   name:string;
-  percentage: number
+  percentage: string
 }

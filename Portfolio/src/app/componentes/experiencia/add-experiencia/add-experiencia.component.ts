@@ -16,8 +16,8 @@ export class AddExperienciaComponent implements OnInit {
   company:string= '';
   img:string= '';
   mode:string= '';
-  start:number= 0;
-  end:number= 0;
+  start:string= '';
+  end:string= '';
   timeElapsed:string= '';
   
   showAddExperience: boolean = false;

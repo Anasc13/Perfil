@@ -12,14 +12,14 @@ import { Subscription } from 'rxjs';
 export class ItemSkillComponent implements OnInit {
   @Output() OnDeleteSkills: EventEmitter<Skills> = new EventEmitter()
   @Output() onEditSkills: EventEmitter<Skills> = new EventEmitter()
-  @Input()  skill: Skills= { name:"", percentage: 0 }
+  @Input()  skill: Skills= { name:"", percentage: "" }
   
   showEditSkills: boolean = false;
   faTrash = faTrash;
 
   id=this.skill.id;
   name: string=this.skill.name;
-  percentage: number=this.skill.percentage;
+  percentage: string=this.skill.percentage;
   
    
   subscription?: Subscription;

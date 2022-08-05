@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class ItemExperienciaComponent implements OnInit {
   @Output() OnDeleteExperience: EventEmitter<Experience> = new EventEmitter()
   @Output() onEditExperience: EventEmitter<Experience> =new EventEmitter();
-  @Input()  experience: Experience= { position:"", company:"", img:"", mode:"", start:0, end:0, timeElapsed:"" }
+  @Input()  experience: Experience= { position:"", company:"", img:"", mode:"", start:"", end:"", timeElapsed:"" }
   
   
   faTrash = faTrash;
@@ -20,8 +20,8 @@ export class ItemExperienciaComponent implements OnInit {
   company: string=this.experience.company;
   img: string=this.experience.img;
   mode: string=this.experience.mode;
-  start:number=this.experience.start;
-  end:number=this.experience.end;
+  start:string=this.experience.start;
+  end:string=this.experience.end;
   timeElapsed: string=this.experience.timeElapsed;
 
   subscription?: Subscription;

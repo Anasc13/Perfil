@@ -16,8 +16,8 @@ export class AddProyectoComponent implements OnInit {
   img:string= '';
   name:string= '';
   description:string= '';
-  start:number= 0;
-  finish:number= 0;
+  start:string= '';
+  end:string= '';
   link:string= '';
   showAddProyectos: boolean = false;
   subscription?: Subscription;
@@ -38,8 +38,8 @@ export class AddProyectoComponent implements OnInit {
     alert('Please add a school!');
     return
   }
-  const { img, name, description, start, finish, link } = this
-  const newProyecto = { img, name, description, start, finish, link }
+  const { img, name, description, start, end, link } = this
+  const newProyecto = { img, name, description, start, end, link }
 
   this.onAddProyectos.emit(newProyecto);
 }

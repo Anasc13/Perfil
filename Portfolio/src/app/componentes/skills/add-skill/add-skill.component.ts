@@ -13,7 +13,7 @@ export class AddSkillComponent implements OnInit {
 
   id?: number;
   name:string= '';
-  percentage:number = 0;
+  percentage:string= '';
   img:string= '';
   showAddSkills: boolean = false;
   subscription?: Subscription;

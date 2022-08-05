@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class ItemEducacionComponent implements OnInit {
   @Output() OnDeleteEducation: EventEmitter<Education> = new EventEmitter()
   @Output() onEditEducation: EventEmitter<Education> =new EventEmitter();
-  @Input()  education: Education= { school:"", title:"", img:"", career:"", score:0, start:0, end:0 }
+  @Input()  education: Education= { school:"", title:"", img:"", career:"", score:"", start:"", end:""}
 
   
   faTrash = faTrash;
@@ -22,9 +22,9 @@ export class ItemEducacionComponent implements OnInit {
   title=this.education.title;
   img=this.education.img;
   career=this.education.career;
-  score:number=this.education.score;
-  start:number=this.education.start;
-  end:number=this.education.end;
+  score=this.education.score;
+  start=this.education.start;
+  end=this.education.end;
 
   subscription?: Subscription;
   showEditEducation: boolean = false;

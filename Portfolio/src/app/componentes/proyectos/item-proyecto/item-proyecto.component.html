@@ -19,7 +19,7 @@
         <p>{{proyecto.description}}</p>
       </li>
         <p>Año de inicio: {{proyecto.start}}</p>
-        <p>Año de finalización: {{proyecto.finish}}</p>
+        <p>Año de finalización: {{proyecto.end}}</p>
         <p>{{proyecto.link}}</p>
         </ul>
     </div>
@@ -49,8 +49,8 @@ value="{{proyecto.start}}"/>
 
 <input type="number" id="edit"
 placeholder="Agregue año" 
-[(ngModel)]="proyecto.finish" [ngModelOptions]="{standalone: true}"
-value="{{proyecto.finish}}"/>
+[(ngModel)]="proyecto.end" [ngModelOptions]="{standalone: true}"
+value="{{proyecto.end}}"/>
 
 <input type="text" id="edit"
 placeholder="Agregue link" 

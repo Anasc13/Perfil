@@ -9,7 +9,7 @@ import { Skills } from 'src/models/Interfaces';
 })
 export class SkillsComponent implements OnInit {
   
-  skills: Skills= { name:"", percentage: 0 }
+  skills: Skills= { name:"", percentage: ""}
   indice:number = -1;
   showEdicionSkill:boolean=false;
   skillsList: Skills[] = [];
