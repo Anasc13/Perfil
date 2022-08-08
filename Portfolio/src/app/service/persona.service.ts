@@ -54,7 +54,7 @@ export class PersonaService {
 
   //Education
   public getEducation(): Observable<Education[]> {
-    return this.http.get<Education[]>(this.apiUrl+"personas/traer")
+    return this.http.get<Education[]>(this.apiUrl+"education/traer")
   }
 
   public deleteEducation(education:Education): Observable<Education>{
