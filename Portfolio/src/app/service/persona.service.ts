@@ -11,7 +11,7 @@ import { Persona, Acerca, Education, Experience, Proyectos, Skills } from 'src/m
 export class PersonaService {
   
   apiUrl:string="https://be-mi-portfolio.herokuapp.com/";
-
+  
   constructor(private http:HttpClient) { }
 
   //Acerca
@@ -35,26 +35,26 @@ export class PersonaService {
 
   //Personas
   public getAllPersonas():  Observable<Persona[]> {
-    return this.http.get<Persona[]>(this.apiUrl+"persona/traer")
+    return this.http.get<Persona[]>(this.apiUrl+"personas/traer")
   }
   
   public deletePersonas(persona: Persona): Observable<Persona>{
     console.log(persona.id)
-    const url=`${this.apiUrl+"persona/borrar"}/${persona.id}`
+    const url=`${this.apiUrl+"personas/borrar"}/${persona.id}`
     return this.http.delete<Persona>(url);
   }
 
   public AddPersona(persona: Persona): Observable<Persona>{
-    return this.http.post<Persona>(this.apiUrl+"persona",persona);
+    return this.http.post<Persona>(this.apiUrl+"personas",persona);
   }
 
   public  UpdatePersona(persona: Persona): Observable<Persona>{
-    return this.http.put<Persona>(this.apiUrl+"persona/editar", persona);
+    return this.http.put<Persona>(this.apiUrl+"personas/editar", persona);
   }
 
   //Education
   public getEducation(): Observable<Education[]> {
-    return this.http.get<Education[]>(this.apiUrl+"education/traer")
+    return this.http.get<Education[]>(this.apiUrl+"personas/traer")
   }
 
   public deleteEducation(education:Education): Observable<Education>{
@@ -90,7 +90,7 @@ export class PersonaService {
 
   //Proyectos
   public getProyectos(): Observable<Proyectos[]> {
-    return this.http.get<Proyectos[]>(this.apiUrl+"proyectos/traer")
+    return this.http.get<Proyectos[]>(this.apiUrl+"proyecto/traer")
   }
 
   public deleteProyectos(proyecto:Proyectos): Observable<Proyectos>{
@@ -99,11 +99,11 @@ export class PersonaService {
   }
 
   public AddProyectos(proyecto:Proyectos): Observable<Proyectos>{
-    return this.http.post<Proyectos>(this.apiUrl+"proyectos/crear", proyecto);
+    return this.http.post<Proyectos>(this.apiUrl+"proyecto/crear", proyecto);
   }
 
   public UpdateProyectos(proyecto:Proyectos): Observable<Proyectos>{
-    return this.http.put<Proyectos>(this.apiUrl+"proyectos/editar", proyecto);
+    return this.http.put<Proyectos>(this.apiUrl+"proyecto/editar", proyecto);
   }
 
   //Skills
