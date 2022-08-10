@@ -20,7 +20,7 @@ export class EncabezadoComponent implements OnInit {
 logout(event:Event){
   event.preventDefault;
   this.logInService.CerrarSesion();
-  this.ruta.navigate(['/login']) }
+  this.ruta.navigate(['/home']) }
 
 }   
 

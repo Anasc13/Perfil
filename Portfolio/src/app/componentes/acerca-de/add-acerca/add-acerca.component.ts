@@ -14,7 +14,6 @@ export class AddAcercaComponent implements OnInit {
   id?: number;
   about:string= '';
   showAddAcerca: boolean = false;
-
   subscription?: Subscription;
 
   constructor(

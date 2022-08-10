@@ -32,6 +32,7 @@ import { ButtonEditComponent } from './componentes/button-edit/button-edit.compo
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { PersonaService } from './service/persona.service';
 import { InterceptorService } from './service/interceptor.service';
+import { HomeComponent } from './componentes/home/home.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { InterceptorService } from './service/interceptor.service';
     ItemAcercaComponent,
     ButtonEditComponent,
     PortfolioComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

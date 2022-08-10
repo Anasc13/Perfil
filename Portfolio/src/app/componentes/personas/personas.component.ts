@@ -27,10 +27,11 @@ export class PersonasComponent implements OnInit {
     EditarPersona (persona: Persona){
       this.personaService.UpdatePersona(persona).subscribe(()=>(
         this.personaList = this.personaList.filter
-        (t => t.id !== persona.id )
+        (t => t.id == persona.id )
       ))
     }
-    
+
+      
     deletePersonas(persona: Persona){
       this.personaService.deletePersonas(persona)
       .subscribe(()=>(
