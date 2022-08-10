@@ -30,7 +30,9 @@ export class PersonaService {
   }
 
   public UpdateAcerca(acerca: Acerca): Observable<Acerca>{
-    return this.http.put<Acerca>(this.apiUrl+"acerca/editar", acerca);
+    console.log(acerca.id)
+    const url=`${this.apiUrl+"acerca/editar"}/${acerca.id}`
+    return this.http.put<Acerca>(url, acerca);
   }
 
   //Personas
@@ -49,7 +51,9 @@ export class PersonaService {
   }
 
   public  UpdatePersona(persona: Persona): Observable<Persona>{
-    return this.http.put<Persona>(this.apiUrl+"personas/editar", persona);
+    console.log(persona.id)
+    const url=`${this.apiUrl+"personas/editar"}/${persona.id}`
+    return this.http.put<Persona>(url, persona);
   }
 
   //Education
@@ -67,7 +71,9 @@ export class PersonaService {
   }
 
   public UpdateEducation(education:Education): Observable<Education>{
-    return this.http.put<Education>(this.apiUrl+"education/editar", education);
+    console.log(education.id)
+    const url=`${this.apiUrl+"education/editar"}/${education.id}`
+    return this.http.put<Education>(url, education);
   }
 
   //experience
@@ -85,7 +91,9 @@ export class PersonaService {
   }
 
   public UpdateExperience(experience:Experience): Observable<Experience>{
-    return this.http.put<Experience>(this.apiUrl+"experience/editar", experience);
+    console.log(experience.id)
+    const url=`${this.apiUrl+"experience/editar"}/${experience.id}`
+    return this.http.put<Experience>(url, experience);
   }
 
   //Proyectos
@@ -103,7 +111,9 @@ export class PersonaService {
   }
 
   public UpdateProyectos(proyecto:Proyectos): Observable<Proyectos>{
-    return this.http.put<Proyectos>(this.apiUrl+"proyecto/editar", proyecto);
+    console.log(proyecto.id)
+    const url=`${this.apiUrl+"proyecto/editar"}/${proyecto.id}`
+    return this.http.put<Proyectos>(url, proyecto);
   }
 
   //Skills
@@ -121,7 +131,9 @@ export class PersonaService {
   }
 
   public UpdateSkills(skill:Skills): Observable<Skills>{
-    return this.http.put<Skills>(this.apiUrl+"skills/editar", skill);
+    console.log(skill.id)
+    const url=`${this.apiUrl+"skills/editar"}/${skill.id}`
+    return this.http.put<Skills>(url, skill);
   }
 
  
