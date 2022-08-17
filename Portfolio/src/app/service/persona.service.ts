@@ -22,20 +22,20 @@ export class PersonaService {
     return this.http.get<Acerca[]>(this.apiUrl+"acerca/traer");
   }
 
-  public deleteAcerca(acerca: Acerca): Observable<Acerca>{
-    console.log(acerca.id)
-    const url=`${this.apiUrl+"acerca/borrar"}/${acerca.id}`
-    return this.http.delete<Acerca>(url);
+  public detailAcerca(acerca: Acerca): Observable<Acerca>{
+    return this.http.get<Acerca>(this.apiUrl + `acerca/traer/${acerca.id}`);
   }
 
-  public AddAcerca(acerca: Acerca): Observable<Acerca>{
-    return this.http.post<Acerca>(this.apiUrl+"acerca/crear", acerca);
+  public deleteAcerca(acerca: Acerca): Observable<any>{
+    return this.http.delete<any>(this.apiUrl + `acerca/borrar/${acerca.id}`);
   }
 
-  public UpdateAcerca(acerca: Acerca): Observable<Acerca>{
-    console.log(acerca.id)
-    const url=`${this.apiUrl+"acerca/editar"}/${acerca.id}`
-    return this.http.put<Acerca>(url, acerca);
+  public AddAcerca(acerca: Acerca): Observable<any>{
+    return this.http.post<any>(this.apiUrl+ "acerca/crear", acerca);
+  }
+
+  public UpdateAcerca(acerca: any): Observable<any>{
+    return this.http.put(this.apiUrl + "acerca/editar", acerca);
   }
 
   //Personas
@@ -43,20 +43,20 @@ export class PersonaService {
     return this.http.get<Persona[]>(this.apiUrl+"personas/traer")
   }
   
+  public detailPersonas(persona: Persona): Observable<Persona>{
+    return this.http.get<Persona>(this.apiUrl + `personas/traer/${persona.id}`);
+  }
+
   public deletePersonas(persona: Persona): Observable<Persona>{
-    console.log(persona.id)
-    const url=`${this.apiUrl+"personas/borrar"}/${persona.id}`
-    return this.http.delete<Persona>(url);
+    return this.http.delete<any>(this.apiUrl + `personas/borrar/${persona.id}`);
   }
 
   public AddPersona(persona: Persona): Observable<Persona>{
-    return this.http.post<Persona>(this.apiUrl+"personas",persona);
+    return this.http.post<any>(this.apiUrl+"personas/crear",persona);
   }
 
-  public  UpdatePersona(persona: Persona): Observable<Persona>{
-    console.log(persona.id)
-    const url=`${this.apiUrl+"personas/editar"}/${persona.id}`
-    return this.http.put<Persona>(url, persona);
+  public  UpdatePersona(persona: any): Observable<any>{
+    return this.http.put(this.apiUrl + "personas/editar", persona);
   }
 
   //Education
@@ -64,19 +64,20 @@ export class PersonaService {
     return this.http.get<Education[]>(this.apiUrl+"education/traer")
   }
 
-  public deleteEducation(education:Education): Observable<Education>{
-    const url = `${this.apiUrl+"education/borrar"}/${education.id}`
-    return this.http.delete<Education>(url)
+  public detailEducation(education:Education): Observable<Education>{
+    return this.http.get<Education>(this.apiUrl + `education/traer/${education.id}`);
   }
 
-  public AddEducation(education:Education): Observable<Education>{
-    return this.http.post<Education>(this.apiUrl+"education/crear", education);
+  public deleteEducation(education:Education): Observable<any>{
+    return this.http.delete<any>(this.apiUrl + `education/borrar/${education.id}`)
   }
 
-  public UpdateEducation(education:Education): Observable<Education>{
-    console.log(education.id)
-    const url=`${this.apiUrl+"education/editar"}/${education.id}`
-    return this.http.put<Education>(url, education);
+  public AddEducation(education:Education): Observable<any>{
+    return this.http.post<any>(this.apiUrl+ "education/crear", education);
+  }
+
+  public UpdateEducation(education:any): Observable<any>{
+    return this.http.put(this.apiUrl+ "education/editar", education);
   }
 
   //experience
@@ -84,60 +85,61 @@ export class PersonaService {
     return this.http.get<Experience[]>(this.apiUrl+"experience/traer")
   }
 
-  public deleteExperience(experience:Experience): Observable<Experience>{
-    const url = `${this.apiUrl+"experience/borrar"}/${experience.id}`
-    return this.http.delete<Experience>(url)
+  public detailExperience(experience:Experience): Observable<Experience>{
+    return this.http.get<Experience>(this.apiUrl + `experience/traer/${experience.id}`);
   }
 
-  public AddExperience(experience:Experience): Observable<Experience>{
-    return this.http.post<Experience>(this.apiUrl+"experience/crear", experience);
+  public deleteExperience(experience:Experience): Observable<any>{
+    return this.http.delete<any>(this.apiUrl+ `experience/borrar/${experience.id}`);
   }
 
-  public UpdateExperience(experience:Experience): Observable<Experience>{
-    console.log(experience.id)
-    const url=`${this.apiUrl+"experience/editar"}/${experience.id}`
-    return this.http.put<Experience>(url, experience);
+  public AddExperience(experience:Experience): Observable<any>{
+    return this.http.post<any>(this.apiUrl+"experience/crear", experience);
+  }
+
+  public UpdateExperience(experience:any): Observable<any>{
+    return this.http.put(this.apiUrl+ "experience/editar", experience);
   }
 
   //Proyectos
   public getProyectos(): Observable<Proyectos[]> {
-    return this.http.get<Proyectos[]>(this.apiUrl+"proyecto/traer")
+    return this.http.get<Proyectos[]>(this.apiUrl+"proyecto/traer");
   }
 
-  public deleteProyectos(proyecto:Proyectos): Observable<Proyectos>{
-    const url = `${this.apiUrl+"proyecto/borrar"}/${proyecto.id}`
-    return this.http.delete<Proyectos>(url)
+  public detailProyectos(proyecto:Proyectos): Observable<Proyectos>{
+    return this.http.get<Proyectos>(this.apiUrl + `proyecto/traer/${proyecto.id}`);
   }
 
-  public AddProyectos(proyecto:Proyectos): Observable<Proyectos>{
-    return this.http.post<Proyectos>(this.apiUrl+"proyecto/crear", proyecto);
+  public deleteProyectos(proyecto:Proyectos): Observable<any>{
+    return this.http.delete<any>(this.apiUrl + `proyecto/borrar/${proyecto.id}`);
   }
 
-  public UpdateProyectos(proyecto:Proyectos): Observable<Proyectos>{
-    console.log(proyecto.id)
-    const url=`${this.apiUrl+"proyecto/editar"}/${proyecto.id}`
-    return this.http.put<Proyectos>(url, proyecto);
+  public AddProyectos(proyecto:Proyectos): Observable<any>{
+    return this.http.post<any>(this.apiUrl + "proyecto/crear", proyecto);
+  }
+
+  public UpdateProyectos(proyecto:any): Observable<any>{
+    return this.http.put(this.apiUrl + "proyecto/editar", proyecto);
   }
 
   //Skills
   public getSkills(): Observable<Skills[]> {
-    return this.http.get<Skills[]>(this.apiUrl+"skills/traer")
+    return this.http.get<Skills[]>(this.apiUrl + "skills/traer")
   }
 
-  public deleteSkills(skill:Skills): Observable<Skills>{
-    const url = `${this.apiUrl+"skills/borrar"}/${skill.id}`
-    return this.http.delete<Skills>(url)
+  public detailSkills(skill:Skills): Observable<Skills>{
+    return this.http.get<Skills>(this.apiUrl + `skills/traer/${skill.id}`);
   }
 
-  public AddSkills(skill:Skills): Observable<Skills>{
-    return this.http.post<Skills>(this.apiUrl+"skills/crear", skill);
+  public deleteSkills(skill:Skills): Observable<any>{
+    return this.http.delete<any>(this.apiUrl + `skills/borrar/${skill.id}`);
   }
 
-  public UpdateSkills(skill:Skills): Observable<Skills>{
-    console.log(skill.id)
-    const url=`${this.apiUrl+"skills/editar"}/${skill.id}`
-    return this.http.put<Skills>(url, skill);
+  public AddSkills(skill:Skills): Observable<any>{
+    return this.http.post<any>(this.apiUrl + "skills/crear", skill);
   }
 
- 
+  public UpdateSkills(skill:any): Observable<any>{
+    return this.http.put(this.apiUrl + "skills/editar", skill);
+  }
 }

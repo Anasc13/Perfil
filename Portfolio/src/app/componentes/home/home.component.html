@@ -93,7 +93,7 @@
         <ul><li>
           <h4>{{experienceList.position}} en {{experienceList.company}}</h4>
         </li>
-        <p>{{experienceList.mode}}</p>
+        <p>Modalidad: {{experienceList.mode}}</p>
         <p>Año de inicio: {{experienceList.start}}</p>
         <p>Año de finalización: {{experienceList.end}}</p>
         <p>Duración: {{experienceList.timeElapsed}}</p>
@@ -121,7 +121,8 @@
         </li>
           <p>Año de inicio: {{proyectosList.start}}</p>
           <p>Año de finalización: {{proyectosList.end}}</p>
-          <p>{{proyectosList.link}}</p>
+          <a href={{proyectosList.link}}>
+            <h5>Click aquí para saber más</h5></a>
       </ul>
     </div>
     </div>
@@ -139,7 +140,7 @@
               <li><div class="Barra">
                 <div class="progress progress-striped">
                 <div class="progress-bar progress-bar-striped" id="bar" role="progressbar" [style.width]="skillsList.percentage+'%'" 
-                attr.aria-valuenow={{skillsList.percentage}} aria-valuemin="0" aria-valuemax="100" style="background-color:rgb(1, 20, 9)"></div>
+                attr.aria-valuenow={{skillsList.percentage}} aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               </div>
               </li>

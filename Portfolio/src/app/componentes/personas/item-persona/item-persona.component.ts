@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class ItemPersonaComponent implements OnInit {
   @Input()  persona: Persona= { nombre:"", apellido:"", mail:"", position:"", ubication:"", companyName:"", companyImg:"", companyUrl:"" }
   @Output() OnDeletePersona: EventEmitter<Persona> = new EventEmitter()
-  @Output() onEditPersona: EventEmitter<Persona> =new EventEmitter();
+  @Output() onEditPersona: EventEmitter<Persona> = new EventEmitter();
 
 
   faTrash = faTrash;
@@ -41,14 +41,8 @@ export class ItemPersonaComponent implements OnInit {
     this.OnDeletePersona.emit(persona);
   }  
 
-  onSubmit(){
-    if(this.nombre.length == 0){
-      alert('Agregue nombre!');
-      return
-    }
-    const { nombre, apellido, mail, position, ubication, companyName, companyImg, companyUrl } = this;
-    const newPersona = { nombre, apellido, mail, position, ubication, companyName, companyImg, companyUrl };
-    this.onEditPersona.emit(newPersona);
+  onSubmit(persona: Persona){
+    this.onEditPersona.emit(persona);
   }  
   
   onToggleEditPersonas(){

@@ -8,6 +8,7 @@ import { Proyectos } from 'src/models/Interfaces';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
+
   proyectosList: Proyectos[] = [];
 
  constructor(private personaService:PersonaService) { }
@@ -19,23 +20,27 @@ export class ProyectosComponent implements OnInit {
   });
   }
 
+  LoadProyectos(): void {
+    this.personaService.getProyectos().subscribe(ProyectosList => {this.proyectosList = ProyectosList;});
+  }
+
   deleteProyectos(proyecto: Proyectos){
     this.personaService.deleteProyectos(proyecto)
-    .subscribe(()=>(
-      this.proyectosList = this.proyectosList.filter
-      (t => t.id !== proyecto.id )
-    ))
+    .subscribe((ProyectosList)=>{
+      this.LoadProyectos();
+  })
   }
 
   AddProyectos (proyecto:Proyectos){
-  this.personaService. AddProyectos(proyecto).subscribe((proyecto)=>( 
-    this.proyectosList.push(proyecto))
-  )}
+  this.personaService. AddProyectos(proyecto).subscribe((ProyectosList)=>{
+    this.LoadProyectos();
+  })
+}
 
   EditarProyectos (proyecto:Proyectos){
-    this.personaService.UpdateProyectos(proyecto).subscribe(()=>(
-      this.proyectosList = this.proyectosList.filter
-      (t => t.id !== proyecto.id )
-    ))
-  }
+    this.personaService.UpdateProyectos(proyecto).subscribe((ProyectosList)=>{
+      this.LoadProyectos()
+  });
+}
+
 }

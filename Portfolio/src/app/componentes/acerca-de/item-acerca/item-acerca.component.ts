@@ -34,18 +34,16 @@ export class ItemAcercaComponent implements OnInit {
     this.OnDeleteAcerca.emit(acerca);
   }  
 
-  onSubmit(){
+  onSubmit(acerca: Acerca){
     if(this.about.length == 0){
       alert('Agregue descripción!');
       return
     }
-    const { about } = this;
-    const newAcerca = { about };
-    this.onEditAcerca.emit(newAcerca);
+    this.onEditAcerca.emit(acerca);
   }
-  
-  
+ 
+ 
   OnToggleeditAcerca(){
     this.editService.toggleEditAcerca();
-    } 
+    }
 }

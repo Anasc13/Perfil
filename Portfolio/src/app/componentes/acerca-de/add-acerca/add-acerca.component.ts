@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./add-acerca.component.css']
 })
 export class AddAcercaComponent implements OnInit {
+  @Input()  acerca:Acerca = { about:"" }
   @Output() onAddAcerca: EventEmitter<Acerca> =new EventEmitter();
 
   id?: number;

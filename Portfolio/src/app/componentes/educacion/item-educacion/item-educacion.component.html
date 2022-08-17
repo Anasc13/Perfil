@@ -18,42 +18,50 @@
     </ul>
 </div>
 <form class="container" 
-(ngSubmit)="onSubmit()"
+(ngSubmit)="onSubmit(education)"
 *ngIf="showEditEducation">
+
+<div class="form-control">
 <input type="text" id="edit"
 placeholder="Agregue institución"
 [(ngModel)]="education.school" [ngModelOptions]="{standalone: true}"
-value="{{education.school}}"/>
-  
+value="{{education.school}}"/></div>
+
+<div class="form-control"> 
 <input type="text" id="edit"
 placeholder="Agregue título" 
 [(ngModel)]="education.title" [ngModelOptions]="{standalone: true}"
-value="{{education.title}}"/>
-    
+value="{{education.title}}"/></div>
+
+<div class="form-control">
 <input type="text" id="edit"
 placeholder="Agregue carrera" 
 [(ngModel)]="education.career"[ngModelOptions]="{standalone: true}"
-value="{{education.career}}"/>
-   
+value="{{education.career}}"/></div>
+
+<div class="form-control">
 <input type="number" id="edit"
 placeholder="Agregue promedio" 
 [(ngModel)]="education.score"[ngModelOptions]="{standalone: true}"
-value="{{education.score}}"/>
+value="{{education.score}}"/></div>
    
+<div class="form-control">
 <input type="number" id="edit"
 placeholder="Agregue año" 
 [(ngModel)]="education.start"[ngModelOptions]="{standalone: true}"
-value="{{education.start}}"/>
-  
+value="{{education.start}}"/></div>
+
+<div class="form-control">
 <input type="number" id="edit"
 placeholder="Agregue año" 
 [(ngModel)]="education.end" [ngModelOptions]="{standalone: true}"
-value="{{education.end}}"/>
-   
+value="{{education.end}}"/></div>
+
+<div class="form-control">
 <input type="text" id="edit"
 placeholder="Agregue ruta de imagen" 
 [(ngModel)]="education.img"[ngModelOptions]="{standalone: true}"
-value="{{education.img}}"/>
+value="{{education.img}}"/></div>
 
 <div class="form-control-buttons">
   <input type="submit" value="Guardar cambios" class="btn btn-block">

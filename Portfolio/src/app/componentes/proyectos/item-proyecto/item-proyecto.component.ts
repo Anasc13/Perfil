@@ -39,14 +39,8 @@ export class ItemProyectoComponent implements OnInit {
   onDelete(proyecto: Proyectos) {
     this.OnDeleteProyectos.emit(proyecto);
   }
-  onSubmit(){
-    if(this.name.length == 0){
-      alert('Agregue institución!');
-      return
-    }
-    const { name, description, img, start, end, link } = this;
-    const newProyecto = { name, description, img, start, end, link };
-    this.OnEditProyectos.emit(newProyecto);
+  onSubmit(proyecto: Proyectos){
+    this.OnEditProyectos.emit(proyecto);
   }  
   
   onToggleEditProyectos(){

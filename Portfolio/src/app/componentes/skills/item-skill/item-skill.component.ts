@@ -37,14 +37,7 @@ export class ItemSkillComponent implements OnInit {
   }
 
   onSubmit(skill: Skills) {
-    if(this.name.length == 0){
-      alert('Agregue habilidad!');
-      return
-    }
-    const { name, percentage } = this
-    const editSkill = { name, percentage }
-    this.onEditSkills.emit(editSkill);
-    this.showEditSkills!=this.showEditSkills;
+    this.onEditSkills.emit(skill);
   }  
   
   onToggleEditSkill(){

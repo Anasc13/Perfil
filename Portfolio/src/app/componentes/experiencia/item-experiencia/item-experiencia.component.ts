@@ -39,19 +39,11 @@ export class ItemExperienciaComponent implements OnInit {
     this.OnDeleteExperience.emit(experience);
   }
 
-  onSubmit(){
-    if(this.position.length == 0){
-      alert('Agregue posición!');
-      return
-    }
-    const { position, company, img, mode, start, end, timeElapsed } = this;
-    const newExperience = { position, company, img, mode, start, end, timeElapsed };
-    this.onEditExperience.emit(newExperience);
+  onSubmit(experience: Experience){
+    this.onEditExperience.emit(experience);
   }  
   
   onToggleEditExperience(){
     this.editService.toggleEditExperience();
     }
-
-
 }

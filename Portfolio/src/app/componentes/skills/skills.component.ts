@@ -23,23 +23,26 @@ export class SkillsComponent implements OnInit {
   });
   }
 
+  LoadSkills(): void {
+    this.personaService.getSkills().subscribe(skillsList => { this.skillsList = skillsList; })
+  }
+
   deleteSkills(skill:Skills){
     this.personaService.deleteSkills(skill)
-    .subscribe(()=>(
-      this.skillsList = this.skillsList.filter
-      (t => t.id !== skill.id )
-    ))
+    .subscribe((skillsList)=>{
+      this.LoadSkills();
+  })
   }
 
   AddSkills (skill:Skills){
-  this.personaService.AddSkills(skill).subscribe((skill)=>( 
-    this.skillsList.push(skill))
-  )}
+  this.personaService.AddSkills(skill).subscribe((skillsList)=>{
+    this.LoadSkills();
+})
+}
 
   EditarSkills (skill:Skills){
-    this.personaService.UpdateSkills(skill).subscribe(()=>(
-      this.skillsList = this.skillsList.filter
-      (t => t.id !== skill.id )
-    ))
+    this.personaService.UpdateSkills(skill).subscribe((skillsList)=>{
+      this.LoadSkills();
+  })
   }
 }

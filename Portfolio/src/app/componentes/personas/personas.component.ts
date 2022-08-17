@@ -10,6 +10,7 @@ import { Persona } from 'src/models/Interfaces';
 export class PersonasComponent implements OnInit {
   
   personaList: Persona[] = [];
+  id:number=0;
      
   constructor(private personaService:PersonaService) { }
 
@@ -18,27 +19,28 @@ export class PersonasComponent implements OnInit {
       this.personaList=personaList
     ));
     }
-   
+    
+    LoadPersona(): void {
+      this.personaService.getAllPersonas().subscribe(personaList => {this.personaList = personaList;})
+    }
+
     AddPersona(persona: Persona){    
-      this.personaService.AddPersona(persona).subscribe((persona)=>( 
-      this.personaList.push(persona))
-    )}
+      this.personaService.AddPersona(persona).subscribe((personaList)=>{
+        this.LoadPersona();
+    })
+  }
 
     EditarPersona (persona: Persona){
-      this.personaService.UpdatePersona(persona).subscribe(()=>(
-        this.personaList = this.personaList.filter
-        (t => t.id == persona.id )
-      ))
+      this.personaService.UpdatePersona(persona).subscribe((personaList)=>{
+        this.LoadPersona();
+    })
     }
 
       
     deletePersonas(persona: Persona){
       this.personaService.deletePersonas(persona)
-      .subscribe(()=>(
-        this.personaList = this.personaList.filter
-        (t => t.id !== persona.id )
-      ))
+      .subscribe((personaList)=>{
+        this.LoadPersona();
+    })
     }
-
-   
 }

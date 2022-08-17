@@ -17,14 +17,14 @@
             (btnClick)="onToggleEditExperience()"></app-button-edit>
         </h4>
       </li>
-        <p>{{experience.mode}}</p>
+        <p>Modalidad: {{experience.mode}}</p>
         <p>Año de inicio: {{experience.start}}</p>
         <p>Año de finalización: {{experience.end}}</p>
         <p>Duración: {{experience.timeElapsed}}</p>
     </ul>
   </div>
 <form class="container" 
-(ngSubmit)="onSubmit()"
+(ngSubmit)="onSubmit(experience)"
 *ngIf="showEditExperience" 
 >
 <input type="text" id="edit"

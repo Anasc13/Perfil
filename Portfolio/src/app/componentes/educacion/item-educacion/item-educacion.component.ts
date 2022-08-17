@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 
 export class ItemEducacionComponent implements OnInit {
   @Output() OnDeleteEducation: EventEmitter<Education> = new EventEmitter()
-  @Output() onEditEducation: EventEmitter<Education> =new EventEmitter();
+  @Output() onEditEducation: EventEmitter<Education> = new EventEmitter();
   @Input()  education: Education= { school:"", title:"", img:"", career:"", score:"", start:"", end:""}
 
   
@@ -41,15 +41,10 @@ export class ItemEducacionComponent implements OnInit {
     this.OnDeleteEducation.emit(education);
   }
 
-  onSubmit(){
-    if(this.school.length == 0){
-      alert('Agregue institución!');
-      return
-    }
-    const { school, title, img, career, score, start, end } = this;
-    const newEducation = { school, title, img, career, score, start, end };
-    this.onEditEducation.emit(newEducation);
+  onSubmit(education: Education){
+    this.onEditEducation.emit(education);
   }  
+
   
   onToggleEditEducation(){
     this.editService.toggleEditEducation();

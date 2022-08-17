@@ -20,24 +20,27 @@ export class ExperienciaComponent implements OnInit {
   });
   }
 
+  LoadExperience(): void {
+    this.personaService.getExperience().subscribe(experienceList => {this.experienceList = experienceList;})
+  }
+
   deleteExperience(experience: Experience){
     this.personaService.deleteExperience(experience)
-    .subscribe(()=>(
-      this.experienceList = this.experienceList.filter
-      (t => t.id !== experience.id )
-    ))
+    .subscribe((experienceList)=>{
+      this.LoadExperience ();
+    })
   }
 
   AddExperience (experience: Experience){
-  this.personaService.AddExperience(experience).subscribe((experience)=>( 
-    this.experienceList.push(experience))
-  )}
+  this.personaService.AddExperience(experience).subscribe((experienceList)=>{
+    this.LoadExperience ();
+  })
+}
 
-  EditarEducation (experience:Experience){
-    this.personaService.UpdateExperience(experience).subscribe(()=>(
-      this.experienceList = this.experienceList.filter
-      (t => t.id !== experience.id )
-    ))
-  }
+  EditarExperience (experience:Experience){
+    this.personaService.UpdateExperience(experience).subscribe((experienceList)=>{
+      this.LoadExperience ();
+  })
+}
 
 }

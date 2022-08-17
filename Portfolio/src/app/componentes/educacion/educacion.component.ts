@@ -19,24 +19,25 @@ export class EducacionComponent implements OnInit {
   });
   }
 
+  LoadEducation(): void {
+    this.personaService.getEducation().subscribe(educationList => {this.educationList = educationList;})
+  }
+
   deleteEducation(education:Education){
     this.personaService.deleteEducation(education)
-    .subscribe(()=>(
-      this.educationList = this.educationList.filter
-      (t => t.id !== education.id )
-    ))
-  }
+    .subscribe((educationList)=>{
+      this.LoadEducation();
+  })}
+  
 
   AddEducation (education:Education){
-  this.personaService.AddEducation(education).subscribe((education)=>( 
-    this.educationList.push(education))
-  )}
+  this.personaService.AddEducation(education).subscribe((educationList)=>{
+    this.LoadEducation();
+  })}
 
-  EditarEducation (education:Education){
-    this.personaService.UpdateEducation(education).subscribe(()=>(
-      this.educationList = this.educationList.filter
-      (t => t.id !== education.id )
-    ))
-  }
-    
+  EditarEducation (education: Education){
+    this.personaService.UpdateEducation(education).subscribe((educationList)=>{
+      this.LoadEducation();
+    })}
+  
 }

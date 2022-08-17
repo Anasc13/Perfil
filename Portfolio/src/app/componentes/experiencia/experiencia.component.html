@@ -7,8 +7,8 @@
         <app-item-experiencia
         *ngFor="let experience of experienceList"
         [experience] = "experience"
-        (OnDeleteExperience) = "deleteExperience(experience)"
-        (onEditExperience) = "EditarEducation($event)">
+        (OnDeleteExperience)="deleteExperience(experience)"
+        (onEditExperience)="EditarExperience($event)">
       </app-item-experiencia>
     </div>
   </div>

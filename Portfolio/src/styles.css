@@ -1,3 +1,8 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+
 h1 {
     font-family: sans-serif, georgia, arial, helvetica;
     font-weight: 700;
@@ -31,8 +36,8 @@ h5{
 div#up-card {
     display: flex;
     margin: 0px auto;
-    max-width: 1890px;
-    max-height: 48px;
+    max-width: auto;
+    max-height: fit-content;
     border-color: none;
     background-color: rgb(47, 83, 65);
     border-radius: 5px;
@@ -50,15 +55,12 @@ div#Logo-AP h4{
 
 div#Logo-AP img{
     float:inline-start;
-    height: 10%;
-    width: 10%;
+    height: 60px;
+    width: 60px;
 }
 
 div#social-media {  
-    display: inline-block;  
-    margin-right: -22%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 10px;
 }
 
 .btn#boton-logIn {
@@ -89,7 +91,7 @@ div.mat-card#first-card {
 
 div#profile-background {
     display:flex;
-}
+} 
 
 div#profile-background img{
    border-radius: 32px 32px 0px 0px;
@@ -161,6 +163,7 @@ div#info-data ul#info-details li a{
 }
 
 div#info-data ul#info-details li a h4{
+    line-height: 1.25;
     font-size:1.2rem;
     color: #104040;
 }
@@ -173,6 +176,7 @@ div#info-data ul#info-details li a img{
 div#descripcion div.card-body h4{
     font-weight:400;
     font-size: 1.3rem;
+    line-height: 1.25;
     color: #104040;
     margin-bottom:0px;
     margin-top: 0px;
@@ -180,6 +184,7 @@ div#descripcion div.card-body h4{
 
 div#descripcion div.card-body h2{
     margin-bottom:0px;
+    line-height: 1.25;
 }
 
 div.list-info ul li{
@@ -191,7 +196,7 @@ div.list-info ul li h4{
     margin-top: -60px;
     font-weight:500;
     font-size: 1.5rem;
-    line-height: 1rem;
+    line-height: 1.2rem;
     color: #104040;
 }
 
@@ -199,7 +204,7 @@ div.list-info p{
     margin-left: 15px;
     font-weight:400;
     font-size: 1.1rem;
-    line-height: 0.5rem;
+    line-height: 1rem;
     color: #104040;
 }
 
@@ -277,4 +282,6 @@ div.form-control-buttons input.btn-block{
     margin-left: 15px;
 }
 
-
+div.progress-bar.progress-bar-striped#bar {
+    background-color:rgb(9, 97, 197)
+}

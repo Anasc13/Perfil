@@ -20,11 +20,12 @@
       </li>
         <p>Año de inicio: {{proyecto.start}}</p>
         <p>Año de finalización: {{proyecto.end}}</p>
-        <p>{{proyecto.link}}</p>
+        <a href={{proyecto.link}}>
+        <h5>Click aquí para saber más</h5></a>
         </ul>
     </div>
 <form class="container" 
-(ngSubmit)="onSubmit()"
+(ngSubmit)="onSubmit(proyecto)"
 *ngIf="showEditProyectos" 
 >
 <input type="text" id="edit"

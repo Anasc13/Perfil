@@ -16,30 +16,31 @@ export class AcercaDeComponent implements OnInit {
   constructor(private personaService:PersonaService) { }
 
   ngOnInit(): void {
-    this.personaService.getAcerca().subscribe((acerca)=>{
-      this.acercalist=acerca;
+    this.personaService.getAcerca().subscribe((acercalist)=>{
+      this.acercalist=acercalist;
   });
   }
 
+  LoadAcerca(): void {
+    this.personaService.getAcerca().subscribe(acercalist => {this.acercalist = acercalist;})
+  }
+
   EditarAcerca (acerca: Acerca){
-    this.personaService.UpdateAcerca(acerca).subscribe(()=>(
-      this.acercalist = this.acercalist.filter
-      (t => t.id !== acerca.id )
-    ))
+    this.personaService.UpdateAcerca(acerca).subscribe((acercalist)=>{
+      this.LoadAcerca();      
+  })
   }
 
   AddAcerca (acerca: Acerca){
-    this.personaService.AddAcerca(acerca).subscribe((acerca)=>( 
-      this.acercalist.push(acerca))
-    )}
+    this.personaService.AddAcerca(acerca).subscribe((acercalist)=>{
+      this.LoadAcerca();
+  })
+}
 
- 
   deleteAcerca(acerca: Acerca){
     this.personaService.deleteAcerca(acerca)
-    .subscribe(()=>(
-      this.acercalist = this.acercalist.filter
-      (t => t.id !== acerca.id )
-    ))
-  }
+    .subscribe((acercalist)=>{
+      this.LoadAcerca();
+  })}
 
 }
