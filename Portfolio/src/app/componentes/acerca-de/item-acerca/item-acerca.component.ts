@@ -35,11 +35,7 @@ export class ItemAcercaComponent implements OnInit {
   }  
 
   onSubmit(acerca: Acerca){
-    if(this.about.length == 0){
-      alert('Agregue descripción!');
-      return
-    }
-    this.onEditAcerca.emit(acerca);
+     this.onEditAcerca.emit(acerca);
   }
  
  
