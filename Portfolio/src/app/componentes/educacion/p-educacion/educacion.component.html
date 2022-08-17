@@ -1,0 +1,9 @@
+<app-add-education
+(onAddEducation)="AddEducation($event)"
+></app-add-education>
+<app-item-education
+    *ngFor="let educacion of educationList"
+    [educacion] = "educacion"
+    (OnDeleteEducation) ="deleteEducation(educacion)"
+  >
+</app-item-education>
