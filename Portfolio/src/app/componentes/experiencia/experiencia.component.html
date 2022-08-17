@@ -1,1 +1,15 @@
-<p>experiencia works!</p>
+<div class="card mat-card">
+    <div class="experience">
+      <div class="card-title">
+        <h2>Experiencia laboral</h2>
+        <app-add-experiencia (onAddExperience)="AddExperience($event)"></app-add-experiencia>
+      </div>
+        <app-item-experiencia
+        *ngFor="let experience of experienceList"
+        [experience] = "experience"
+        (OnDeleteExperience) = "deleteExperience(experience)"
+        (onEditExperience) = "EditarEducation($event)">
+      </app-item-experiencia>
+    </div>
+  </div>
+  

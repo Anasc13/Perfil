@@ -1,31 +1,17 @@
 <div class="Personas">
     <div class="card mat-card" id="first-card">
-        <div id="profile-background"><img [src]="bannerList[0].backImage" alt="Foto_banner"></div>
+        <div id="profile-background"><img src="../assets/Images/bosques2.png" alt="Foto_banner"></div>
         <div id="info" style="padding: 16px">
             <div id="info-img">
-                <img class="profile-image rounded-circle" [src]="bannerList[0].profileImage" alt="Foto_pefil">
+                <img class="profile-image rounded-circle" src="../assets/Images/Perfil_circle.JPG" alt="Foto_pefil">
             </div>
-            <app-button
-            color = "{{ showAddPersonas ? '#162856' : '#104040' }}"
-            (click)="OntoggleAddPersonas()"
-            ></app-button>
-            <div id="info-data">
-                <div>
-                <h1>{{personaList[0].nombre}} {{personaList[0].apellido}}</h1>
-                <h5>{{personaList[0].mail}}</h5>
-                <div id="info-company">{{personaList[0].position}}</div>
-                <div id="info-contact"><span>{{personaList[0].ubication}}</span></div>
-                </div>
-                <div><ul id="info-details">
-                    <li><a href={{personaList[0].companyUrl}}>
-                        <img [src]="personaList[0].companyImg">
-                        <h4>{{personaList[0].companyName}}</h4>
-                    </a></li></ul></div>
-            </div>
-            <app-edit-persona
-            (OnAddPersona)="AddPersona($event)"
-            ></app-edit-persona>
-        </div>
+            <app-edit-persona (OnAddPersona)="AddPersona($event)"></app-edit-persona>
+        <app-item-persona
+            *ngFor="let persona of personaList"
+            [persona] = "persona"
+            (OnDeletePersona)="deletePersonas(persona)"
+            (onEditPersona)="EditarPersona($event)">
+        </app-item-persona>
     </div>
 </div>
-
+</div>

@@ -8,12 +8,7 @@ export interface Persona {
     companyName: string;
     companyImg: string;
     companyUrl: string;
-}
-
-export interface Banner {
-      backImage: string;
-      profileImage: string
-    }
+} 
 
 export interface Acerca {
   id?: number;
@@ -27,7 +22,7 @@ export interface Education {
   img:string;
   career:string;
   score:string;
-  start:string;
+  start: string;
   end:string;
 }
 
@@ -37,7 +32,7 @@ export interface Experience {
   company:string;
   img:string;
   mode:string;
-  star:string;
+  start: string;
   end:string;
   timeElapsed:string;
 }
@@ -47,13 +42,13 @@ export interface Proyectos {
   img:string;
   name:string;
   description:string;
-  start:string;
-  finish:string;
+  start: string;
+  end:string;
   link:string;
 }
 
 export interface Skills {
   id?: number;
   name:string;
-  img:string;
+  percentage: string
 }

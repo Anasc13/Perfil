@@ -1,1 +1,15 @@
-<p>proyectos works!</p>
+<div class="card mat-card">
+    <div class="proyecto">
+      <div class="card-title">
+        <h2>Proyectos</h2>
+        <app-add-proyecto (onAddProyectos)="AddProyectos($event)"></app-add-proyecto>
+      </div>
+        <app-item-proyecto 
+        *ngFor="let proyecto of proyectosList"
+        [proyecto] = "proyecto"
+        (OnDeleteProyectos) = "deleteProyectos(proyecto)"
+        (OnEditProyectos)="EditarProyectos($event)">
+      </app-item-proyecto>
+    </div>
+  </div>
+  

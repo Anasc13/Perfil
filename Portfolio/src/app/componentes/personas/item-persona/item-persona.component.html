@@ -1,0 +1,69 @@
+<div class="Personas">
+    <div id="info-data">
+    <div>
+        <h1>{{persona.nombre}} {{persona.apellido}}
+            <button class="btn"><fa-icon
+            [icon]="faTrash"
+            [ngStyle]="{'#162856' : '#104040'}"
+            (click)="onDelete(persona)"></fa-icon></button>
+            <app-button-edit
+            color = "{{ showEditPersonas ? '#162856' : '#104040' }}"
+            (btnClick)="onToggleEditPersonas()"></app-button-edit>        
+        </h1>
+        <h5>{{persona.mail}}</h5>
+            <div id="info-company">{{persona.position}}</div>
+            <div id="info-contact"><span>{{persona.ubication}}</span></div>
+            </div>
+            <div><ul id="info-details">
+                <li><a href={{persona.companyUrl}}>
+                    <img [src]="persona.companyImg">
+                    <h4>{{persona.companyName}}</h4>
+                </a></li></ul> 
+            </div>
+<form class="container"
+    (ngSubmit)="onSubmit()"
+    *ngIf="showEditPersonas">
+
+    <input id="edit" type="text"
+    placeholder="Agregue nombre" 
+    [(ngModel)]="persona.nombre" [ngModelOptions]="{standalone: true}"
+    value="{{persona.nombre}}"/>
+
+    <input id="edit" type="text"
+    placeholder="Agregue apellido" 
+    [(ngModel)]="persona.apellido" [ngModelOptions]="{standalone: true}"
+    value="{{persona.apellido}}"/>
+
+    <input id="edit" type="e-mail" 
+    placeholder="Agregue e-mail" 
+    [(ngModel)]="persona.mail" [ngModelOptions]="{standalone: true}"
+    value="{{persona.mail}}"/>
+
+    <input id="edit" type="text"
+    placeholder="Agregue posición" 
+    [(ngModel)]="persona.position" [ngModelOptions]="{standalone: true}"
+    value="{{persona.position}}"/>
+    
+    <input id="edit" type="text"
+    placeholder="Agregue ubicación" 
+    [(ngModel)]="persona.ubication" [ngModelOptions]="{standalone: true}"
+    value="{{persona.ubication}}"/>
+    
+    <input id="edit" type="text"
+    placeholder="Agregue nombre de empresa" 
+    [(ngModel)]="persona.companyName" [ngModelOptions]="{standalone: true}"
+    value="{{persona.companyName}}"/>
+
+    <input id="edit" type="text"
+    placeholder="Agregue ruta de imagen" 
+    [(ngModel)]="persona.companyImg" [ngModelOptions]="{standalone: true}"
+    value="{{persona.companyImg}}"/>
+    
+    <input id="edit" type="text"
+    placeholder="Agregue url" 
+    [(ngModel)]="persona.companyUrl" [ngModelOptions]="{standalone: true}"
+    value="{{persona.companyUrl}}"/>
+    </form>  
+    </div>
+</div> 
+

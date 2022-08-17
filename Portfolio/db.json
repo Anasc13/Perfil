@@ -1,36 +1,21 @@
 {
-  "Banner": [
-    {
-      "backImage": "../assets/Images/bosques2.png",
-      "profileImage": "../assets/Images/Perfil_circle.JPG"
-    }
-  ],
   "Persona": [
     {
       "nombre": "Ana",
       "apellido": "Santa Cruz",
       "mail": "anasantacruz13@gmail.com",
       "position": "Analista de datos",
-      "ubication": "Salta (Argentina)",
+      "ubication": "Salta, Argentina",
       "companyName": "OVcM",
-      "companyImg": "../assets/Images/Logo_ovcm.png",
-      "ucompanyUrl": "http://ovcmsalta.gob.ar/"
+      "companyImg": "assets/Images/Logo_ovcm.png",
+      "companyUrl": "http://ovcmsalta.gob.ar/",
+      "id": 2
     }
   ],
   "Acerca": [
     {
-      "about": "Socióloga especialista en análisis y gestión de información cuantitativa y georreferenciada."
-    }
-  ],
-  "Experience": [
-    {
-      "position": "Analista de datos",
-      "company": "Observatorio de Violencia contra las Mujeres",
-      "img": "assets/Images/Logo_ovcm.png",
-      "mode": "part-time",
-      "start": "2019",
-      "end": "a la actualidad",
-      "timeElapsed": "3 años"
+      "about": "Socióloga especialista en análisis y gestión de información cuantitativa y georreferenciada.",
+      "id": 1 
     }
   ],
   "Education": [
@@ -39,46 +24,59 @@
       "title": "Licenciada",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
       "career": "Sociología",
-      "score": 8.7,
-      "start": 2003,
-      "end": 2008
-    },
-    {
-      "school": "Universidad de Buenos Aires",
-      "title": "Magister",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
-      "career": "Maestría en Políticas Ambientales y Territoriales",
-      "score": 0,
-      "start": 2013,
-      "end": "a la actualidad"
+      "score": "8.7",
+      "start": "2003",
+      "end": "2008",
+      "id": 3
     }
   ],
-  "Projects": [
+  "Experience": [
     {
+      "id": 1,
+      "position":"Analista de datos",
+      "company":"Observatorio de Violencia contra las Mujeres",
+      "img":"assets/Images/Logo_ovcm.png",
+      "mode":"part-time",
+      "start":"2019",
+      "end":"a la actualidad",
+      "timeElapsed": "3 años"
+    }
+  ],
+  "Proyectos": [
+    {
+      "id": 1,
       "img": "assets/Images/",
-      "name": "Mi portfolio",
-      "description": "Aplicación de cv para Argentina Programa",
-      "start": 2022,
-      "finish": 2022,
-      "link": "na"
+        "name":"Mi portfolio",
+        "description": "Aplicación de cv para Argentina Programa",
+        "start": "2022",
+        "end": "2022",
+        "link": "https://portfolio-8b019.web.app/"
     },
     {
+      "id": 2,
       "img": "assets/Images/",
-      "name": "Vizualizaciones de resultados electorales",
+      "name":"Vizualizaciones de resultados electorales",
       "description": "Procesamiento y elaboración de visualizaciones en lenguaje R de resultados electorales provinciales",
-      "start": 2020,
-      "finish": 2022,
-      "link": "na"
+      "start": "2020",
+      "end": "2022",
+      "link": "sin respositorio virtual"
     }
   ],
   "Skills": [
     {
-      "name": "Soft Skills",
-      "img": "assets/Images/soft_c.png"
+      "id": 1,
+      "name": "Typescript",
+      "percentage": 80
     },
     {
-      "name": "Hard skills",
-      "img": "assets/Images/"
+      "id": 2,
+      "name": "Resolución de problemas",
+      "percentage": 100
+    },
+    {
+      "name": "R language",
+      "percentage": 80,
+      "id": 4
     }
   ]
 }

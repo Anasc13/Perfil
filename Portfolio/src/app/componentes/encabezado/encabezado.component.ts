@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LogInService } from 'src/app/service/log-in.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-encabezado',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-  
-  constructor( ) {}
+
+  constructor(
+    private logInService: LogInService,
+    private ruta:Router ) 
+    { }
 
   ngOnInit(): void {
      }
 
-}
+logout(event:Event){
+  event.preventDefault;
+  this.logInService.CerrarSesion();
+  this.ruta.navigate(['/home']) }
+
+}   
+
+
+

@@ -30,8 +30,9 @@ h5{
 }
 div#up-card {
     display: flex;
-    margin: 0px 10px 0px 10px;
-    width: 99%;
+    margin: 0px auto;
+    max-width: 1890px;
+    max-height: 48px;
     border-color: none;
     background-color: rgb(47, 83, 65);
     border-radius: 5px;
@@ -39,42 +40,36 @@ div#up-card {
 } 
 
 div#Logo-AP h4{
-    display:inline;
-    position: relative !important;
-    float:inline;
+    float:inline-start;
     height: 50px;
     padding:5px;
     font-size:1.1rem;
     color: #f4f5f8;
     font-weight:550;
-    line-height: 2.5;
 }
 
 div#Logo-AP img{
-    display: inline;
     float:inline-start;
-    position: relative !important;
-    height: 50px;
-    width: 75px;
+    height: 10%;
+    width: 10%;
 }
 
-div#social-media {
-    float:inline-end;
-    position: relative !important;
+div#social-media {  
+    display: inline-block;  
+    margin-right: -22%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-button#boton-logIn {
+.btn#boton-logIn {
     border-radius: 5px;
+    background: rgb(33, 58, 45);
+    color: rgb(216, 241, 171);
+    width: 100px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
     font-family: inherit; 
-    color: #f4f5f8; 
-    display: inline;
-    width: 120px; 
-    float:inline-end;
-    margin-top: 5px;
-    position: relative !important;
 }
 
 div.mat-card {
@@ -187,15 +182,13 @@ div#descripcion div.card-body h2{
     margin-bottom:0px;
 }
 
-div.data-container a {
-    color: #104040;
+div.list-info ul li{
+    list-style: none inside;
 }
 
-div.list-info{
-    flex-grow: 1;
-}
-
-div.list-info h4{
+div.list-info ul li h4{
+    margin-left: 15px;
+    margin-top: -60px;
     font-weight:500;
     font-size: 1.5rem;
     line-height: 1rem;
@@ -203,65 +196,76 @@ div.list-info h4{
 }
 
 div.list-info p{
+    margin-left: 15px;
     font-weight:400;
     font-size: 1.1rem;
     line-height: 0.5rem;
     color: #104040;
 }
 
-div.data-container div.logo-image-container a img{
-    z-index: 1;
-    margin-left: -5px;
+div.logo-image-container img{
+    margin-left: -15px;
     margin-right: 15px;
     margin-bottom: 5px;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 
-.btn-primary {
-    background: rgb(33, 58, 45);
-    color: rgb(216, 241, 171);
-    border-color: rgb(47, 83, 65);
+.btn {
+    display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
 }
 
-.btn-light{
-    border-color: rgb(1, 20, 9);
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
+form.container{
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 100px;
+    border: 2px solid steelblue;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.btn-right {
-    color: rgb(33, 58, 45);
-    cursor: pointer;
-}
-
-form.add-form div.form-control{
+div.form-control{
     display: flex;
-    width: 50%;
-    height: 50%;
     background:  rgb(153, 172, 162);
     border-color: rgb(153, 172, 162);
+    margin-bottom: 5px;
 }
 
 div.form-control input{
-    display: flex;
     background-color: rgb(203, 216, 209);
-    border-color:rgb(47, 83, 65);
+    border:2px solid rgb(47, 83, 65);
     border-radius: 5px;
     font-weight:400;
     font-size: 1rem;
-    width: 50%; 
+    width: 100%; 
+    height: 40px;
+}
+
+input#edit{
+    background-color: rgb(203, 216, 209);
+    border:2px solid rgb(47, 83, 65);
+    border-radius: 5px;
+    font-weight:400;
+    font-size: 1rem;
+    padding: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.form-control label {
+    font-family: inherit;
+    text-align: left;
+    color:rgb(1, 20, 9);
+    font-weight:600;
+    margin-top: 10px;
 }
 
 div.form-control-buttons input.btn-block{
     display: block;
-    width: 8%;
+    width: 30%;
     background: rgb(33, 58, 45);
     color: rgb(216, 241, 171);
     border-color: rgb(47, 83, 65);
@@ -269,16 +273,8 @@ div.form-control-buttons input.btn-block{
     text-decoration: none;
     font-size: 15px;
     font-family: inherit;
-    margin-top: 5px;
+    margin-top: 25px;
     margin-left: 15px;
 }
 
-.form-control label {
-    display: flex;
-    font-family: inherit;
-    text-align: left;
-    color:rgb(1, 20, 9);
-    width: 50%;
-    height: 10%;
-    line-height: 0.5rem;
-}
+

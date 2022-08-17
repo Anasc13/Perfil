@@ -1,1 +1,16 @@
-<p>skills works!</p>
+<div class="card mat-card">
+  <div class="skills">
+    <div class="card-title">
+      <h2>Skills</h2>
+      <app-add-skill (onAddSkills)="AddSkills($event)"></app-add-skill></div>
+  <div>  
+      <app-item-skill
+    *ngFor="let skill of skillsList"
+    [skill] = "skill"
+    (OnDeleteSkills) = "deleteSkills(skill)"
+    (onEditSkills)="EditarSkills($event)">
+  </app-item-skill> </div>
+ </div>
+</div>
+  
+  

@@ -1,7 +1,7 @@
-<form class="add-form"
+<form class="container" 
 (ngSubmit)="onSubmit()"
 *ngIf="showAddPersonas"
->
+> 
 
 <div class="form-control">
     <label for="text"> Cambia tu información personal: </label></div>
@@ -10,55 +10,69 @@
         name="nombre" 
         id="addnombre"  
         placeholder="Agregue nombre" 
-        [(ngModel)]="nombre">
+        [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}"
+        value="{{nombre}}">
     </div>
     <div class="form-control">
         <input type="text"
         name="apellido" 
         id="addapellido" 
         placeholder="Agregue apellido" 
-        [(ngModel)]="apellido">
+        [(ngModel)]="apellido" [ngModelOptions]="{standalone: true}"
+        value="{{apellido}}">
     </div>
     <div class="form-control">
         <input type="e-mail" 
         name="mail" 
         id="addmail"
         placeholder="Agregue e-mail" 
-        [(ngModel)]="mail">
+        [(ngModel)]="mail" [ngModelOptions]="{standalone: true}"
+        value="{{mail}}">
     </div>
     <div class="form-control">
         <input type="text"
         name="position" 
         id="addposition"  
         placeholder="Agregue posición" 
-        [(ngModel)]="position">
+        [(ngModel)]="position" [ngModelOptions]="{standalone: true}"
+        value="{{position}}">
       </div>
       <div class="form-control">
         <input type="text"
         name="ubication" 
         id="addubication"  
         placeholder="Agregue ubicación" 
-        [(ngModel)]="ubication">
-    </div>
-    <div class="form-control">
-        <input type="text"
-        name="companyUrl" 
-        id="addcompanyUrl"  
-        placeholder="Agregue url" 
-        [(ngModel)]="companyUrl">
+        [(ngModel)]="ubication" [ngModelOptions]="{standalone: true}"
+        value="{{ubication}}">
     </div>
     <div class="form-control">
         <input type="text"
         name="companyName" 
         id="addcompanyName"  
         placeholder="Agregue nombre de empresa" 
-        [(ngModel)]="companyName">
+        [(ngModel)]="companyName" [ngModelOptions]="{standalone: true}"
+        value="{{companyName}}">
+    </div>
+    <div class="form-control">
+        <input type="text"
+        name="companyImg" 
+        id="addcompanyImg"  
+        placeholder="Agregue ruta de imagen" 
+        [(ngModel)]="companyImg" [ngModelOptions]="{standalone: true}"
+        value="{{companyImg}}">
     </div>
     
+    <div class="form-control">
+        <input type="text"
+        name="companyUrl" 
+        id="addcompanyUrl"  
+        placeholder="Agregue url" 
+        [(ngModel)]="companyUrl" [ngModelOptions]="{standalone: true}"
+        value="{{companyUrl}}">
+    </div>
+
         <div class="form-control-buttons">
-            <input class="btn btn-block"
-            type="submit" 
-            > Guardar cambios
+            <input type="submit" value="Guardar cambios" class="btn btn-block">
         </div>
 </form>
 
