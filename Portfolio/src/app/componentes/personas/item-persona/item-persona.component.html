@@ -20,49 +20,65 @@
                     <h4>{{persona.companyName}}</h4>
                 </a></li></ul> 
             </div>
+
 <form class="container"
     (ngSubmit)="onSubmit()"
     *ngIf="showEditPersonas">
 
+    <div class="form-control">
+        <label for="text"> Cambia tu información personal: </label></div>
+    <div class="form-control">
     <input id="edit" type="text"
     placeholder="Agregue nombre" 
     [(ngModel)]="persona.nombre" [ngModelOptions]="{standalone: true}"
-    value="{{persona.nombre}}"/>
+    value="{{persona.nombre}}"/></div>
 
+    <div class="form-control">
     <input id="edit" type="text"
     placeholder="Agregue apellido" 
     [(ngModel)]="persona.apellido" [ngModelOptions]="{standalone: true}"
-    value="{{persona.apellido}}"/>
+    value="{{persona.apellido}}"/></div>
 
+    <div class="form-control">
     <input id="edit" type="e-mail" 
     placeholder="Agregue e-mail" 
     [(ngModel)]="persona.mail" [ngModelOptions]="{standalone: true}"
-    value="{{persona.mail}}"/>
+    value="{{persona.mail}}"/></div>
 
+    <div class="form-control">
     <input id="edit" type="text"
     placeholder="Agregue posición" 
     [(ngModel)]="persona.position" [ngModelOptions]="{standalone: true}"
-    value="{{persona.position}}"/>
+    value="{{persona.position}}"/></div>
     
+    <div class="form-control">
     <input id="edit" type="text"
     placeholder="Agregue ubicación" 
     [(ngModel)]="persona.ubication" [ngModelOptions]="{standalone: true}"
-    value="{{persona.ubication}}"/>
+    value="{{persona.ubication}}"/></div>
     
+    <div class="form-control">
     <input id="edit" type="text"
     placeholder="Agregue nombre de empresa" 
     [(ngModel)]="persona.companyName" [ngModelOptions]="{standalone: true}"
-    value="{{persona.companyName}}"/>
+    value="{{persona.companyName}}"/></div>
 
+    <div class="form-control">
     <input id="edit" type="text"
     placeholder="Agregue ruta de imagen" 
     [(ngModel)]="persona.companyImg" [ngModelOptions]="{standalone: true}"
-    value="{{persona.companyImg}}"/>
+    value="{{persona.companyImg}}"/></div>
     
+    <div class="form-control">
     <input id="edit" type="text"
     placeholder="Agregue url" 
     [(ngModel)]="persona.companyUrl" [ngModelOptions]="{standalone: true}"
-    value="{{persona.companyUrl}}"/>
+    value="{{persona.companyUrl}}"/></div>
+
+    <div class="form-control-buttons">
+        <input type="submit" value="Guardar cambios" class="btn btn-block">
+    </div>
+    
     </form>  
     </div>
 </div> 

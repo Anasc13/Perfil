@@ -17,7 +17,12 @@
         <input id="edit" type="text"
         placeholder="Agregue descripción"
         [(ngModel)]="acerca.about" [ngModelOptions]="{standalone: true}"
-        value="{{acerca.about}}">    
+        value="{{acerca.about}}"> 
+        
+        <div class="form-control-buttons">
+            <input type="submit" value="Guardar cambios" class="btn btn-block">
+        </div>
+        
     </form>    
     </div>
 </div>  
