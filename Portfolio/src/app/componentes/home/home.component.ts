@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
        
 constructor(
   private logInService: LogInService,
-  private ruta:Router, private personaService:PersonaService) 
+  private ruta:Router, private personaService: PersonaService) 
   { }
 
   ngOnInit(): void {
