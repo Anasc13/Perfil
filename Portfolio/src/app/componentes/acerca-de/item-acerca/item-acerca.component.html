@@ -1,0 +1,23 @@
+<div id="descripcion">
+    <div class="card-body">     
+    <h4>{{acerca.about}}
+        <button class="btn"><fa-icon
+            [icon]="faTrash"
+            [ngStyle]="{'#162856' : '#104040'}"
+            (click)="onDelete(acerca)"
+            ></fa-icon></button>
+            <app-button-edit
+            color = "{{ showEditarAcerca ? '#162856' : '#104040' }}"
+            (btnClick)="OnToggleeditAcerca()">
+        </app-button-edit></h4>
+    <form 
+    class="container"
+    (ngSubmit)="onSubmit()"
+    *ngIf="showEditarAcerca">
+        <input id="edit" type="text"
+        placeholder="Agregue descripción"
+        [(ngModel)]="acerca.about" [ngModelOptions]="{standalone: true}"
+        value="{{acerca.about}}">    
+    </form>    
+    </div>
+</div>  

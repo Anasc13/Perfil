@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="mb-5">Iniciar Sesión </h1>
+  <form [formGroup]="form" class="mb-5" (ngSubmit)="onEnviar($event)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+    <input type="nombreUsuario" formControlName="nombreUsuario" 
+    [ngClass]="{'is-invalid': nombreUsuario?.errors && nombreUsuario?.touched,'is-valid':!nombreUsuario?.errors && nombreUsuario?.touched}"
+class="form-control" id="exampleInputnombreUsuario1" aria-describedby="nombreUsuariolHelp">
+    <div *ngIf="nombreUsuario?.errors && nombreUsuario?.touched">
+    <p *ngIf="nombreUsuario?.hasError('required')" class="text-danger">El nombre de usuario es requerido</p>
+  </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+    <input type="password" formControlName="password"
+[ngClass]="{'is-invalid': Password?.errors && Password?.touched,'is-valid':!Password?.errors && Password?.touched}"
+class="form-control" id="exampleInputPassword1">
+<div *ngIf="Password?.errors && Password?.touched">
+    <p *ngIf="Password?.hasError('required')" class="text-danger">La contraseña es requerida</p>
+<p *ngIf="Password?.hasError('Password')" class="text-danger">La contraseña debe ser de 8 o más caracteres</p>
+  </div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+

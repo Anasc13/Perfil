@@ -1,0 +1,69 @@
+<app-button
+        color = "{{ showAddProyectos ? '#162856' : '#104040' }}"
+        (btnClick)="onToggleAddProyectos()"
+        ></app-button>        
+
+<form class="container" 
+(ngSubmit)="onSubmit()"
+*ngIf="showAddProyectos" 
+>
+
+     <div class="form-control">
+         <label for="text">Nombre</label></div>
+    <div class="form-control">
+         <input type="text" 
+         name="name" 
+         id="name" 
+         placeholder="Agregue nombre"
+         [(ngModel)]="name"
+         />
+     </div>
+     
+     <div class="form-control">
+        <label for="text">Descripcion</label></div>
+    <div class="form-control">
+        <input type="text" 
+        name="description" 
+        id="description" 
+        placeholder="Agregue descripcion" 
+        [(ngModel)]="description"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="number">Año de inicio</label></div>
+    <div class="form-control">
+        <input type="number" 
+        name="start" 
+        id="start"
+        placeholder="Agregue año" 
+        [(ngModel)]="start"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="number">Año de finalización</label></div>
+    <div class="form-control">
+        <input type="number" 
+        name="end" 
+        id="end"
+        placeholder="Agregue año" 
+        [(ngModel)]="end"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="text">Link</label></div>
+    <div class="form-control">
+        <input type="text" 
+        name="link" 
+        id="link"
+        placeholder="Agregue link" 
+        [(ngModel)]="link"
+        />
+    </div>
+    
+    <div class="form-control-buttons">
+        <input type="submit" value="Guardar cambios" class="btn btn-block">
+    </div>
+</form>

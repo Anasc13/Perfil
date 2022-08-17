@@ -1,0 +1,36 @@
+<app-button
+        color = "{{ showAddSkills ? '#162856' : '#104040' }}"
+        (btnClick)="OnToggleAddSkills()"
+        ></app-button>        
+
+<form class="container" 
+(ngSubmit)="onSubmit()"
+*ngIf="showAddSkills" 
+>
+
+     <div class="form-control">
+         <label for="text">Skill</label></div>
+    <div class="form-control">
+         <input type="text" 
+         name="name" 
+         id="name" 
+         placeholder="Agregue tipo"
+         [(ngModel)]="name"
+         />
+     </div>
+
+     <div class="form-control">
+        <label for="number">Skill</label></div>
+   <div class="form-control">
+        <input type="number" 
+        name="percentage" 
+        id="percentage" 
+        placeholder="Agregue porcentaje"
+        [(ngModel)]="percentage"
+        />
+    </div>
+            
+    <div class="form-control-buttons">
+        <input type="submit" value="Guardar cambios" class="btn btn-block">
+    </div>
+</form>

@@ -1,4 +1,9 @@
-<form class="add-form" 
+<app-button
+        color = "{{ showAddEducation ? '#162856' : '#104040' }}"
+        (btnClick)="OnToggleAddEducation()"
+        ></app-button>        
+
+<form class="container" 
 (ngSubmit)="onSubmit()"
 *ngIf="showAddEducation" 
 >
@@ -37,9 +42,9 @@
     </div>
 
     <div class="form-control">
-        <label for="text">Promedio</label></div>
+        <label for="number">Promedio</label></div>
     <div class="form-control">
-        <input type="text" 
+        <input type="number" 
         name="score" 
         id="score"
         placeholder="Agregue promedio" 
@@ -48,9 +53,9 @@
     </div>
 
     <div class="form-control">
-        <label for="text">Año de inicio</label></div>
+        <label for="number">Año de inicio</label></div>
     <div class="form-control">
-        <input type="text" 
+        <input type="number" 
         name="start" 
         id="start"
         placeholder="Agregue año" 
@@ -59,13 +64,24 @@
     </div>
 
     <div class="form-control">
-        <label for="text">Año de finalización</label></div>
+        <label for="number">Año de finalización</label></div>
     <div class="form-control">
-        <input type="text" 
+        <input type="number" 
         name="end" 
         id="end"
         placeholder="Agregue año" 
         [(ngModel)]="end"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="text">Imagen</label></div>
+    <div class="form-control">
+        <input type="text" 
+        name="end" 
+        id="end"
+        placeholder="Agregue ruta de imagen" 
+        [(ngModel)]="img"
         />
     </div>
     

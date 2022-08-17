@@ -1,17 +1,14 @@
 <div class="card mat-card">
   <div class="card-title">
     <h2> Acerca de </h2>
-      <app-button
-        color = "{{ showAddAcerca ? '#162856' : '#104040' }}"
-        (click)="OnToggleAddAcerca()"
-    ></app-button>
-    <app-add-acerca
-    (onAddAcerca)="AddAcerca($event)"
-    ></app-add-acerca>
-    <div id="descripcion">
-      <div class="card-body">
-        <h4>{{acercaList[0].about}}</h4>
-      </div>     
-    </div>
+    <app-add-acerca (onAddAcerca)="AddAcerca($event)"></app-add-acerca>
+    <app-item-acerca
+    *ngFor="let acerca of acercalist"
+    [acerca] = "acerca"
+    (OnDeleteAcerca)="deleteAcerca(acerca)" 
+    (onEditAcerca)="EditarAcerca($event)"
+    >
+    </app-item-acerca>
   </div>
 </div>
+

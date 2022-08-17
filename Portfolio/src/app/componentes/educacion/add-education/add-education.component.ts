@@ -12,6 +12,7 @@ import { Education } from 'src/models/Interfaces';
 export class AddEducationComponent implements OnInit {
   @Output() onAddEducation: EventEmitter<Education> =new EventEmitter();
 
+  id?: number
   school:string= '';
   title:string= '';
   img:string= '';
@@ -23,9 +24,9 @@ export class AddEducationComponent implements OnInit {
   subscription?: Subscription;
 
   constructor(
-    private editService: EditService
+    private editService: EditService,
   ) {
-    this.subscription = this.editService.onToggleEducation()
+    this.subscription = this.editService.onToggleAddEducation()
                               .subscribe(value => this.showAddEducation = value )
    }
 
@@ -41,6 +42,10 @@ export class AddEducationComponent implements OnInit {
   const newEducation = { school, title, img, career, score, start, end }
 
   this.onAddEducation.emit(newEducation);
+}
+
+OnToggleAddEducation (){
+  this.editService.toggleAddEducation();
 }
 
 }

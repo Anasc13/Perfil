@@ -1,15 +1,23 @@
-<form class="add-form" 
+<app-button
+        color = "{{ showAddAcerca ? '#162856' : '#104040' }}"
+        (btnClick)="OnToggleAddAcerca()">
+    </app-button>
+
+<form 
+class="container"
 (ngSubmit)="onSubmit()"
-*ngIf="showAddAcerca"
->
+*ngIf="showAddAcerca">
+
 <div class="form-control">
+    <label for="text"></label>
     <input type="text"
-    name="about"
-    id="about"
+    name="about" 
+    id="about" 
     placeholder="Agregue descripción"
     [(ngModel)]="about">
 </div>
+
 <div class="form-control-buttons">
     <input type="submit" value="Guardar cambios" class="btn btn-block">
-</div>
+    </div>
 </form>

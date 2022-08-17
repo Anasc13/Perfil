@@ -1,0 +1,81 @@
+<app-button
+        color = "{{ showAddExperience ? '#162856' : '#104040' }}"
+        (btnClick)="OnToggleAddExperience()"
+        ></app-button>        
+
+<form class="container" 
+(ngSubmit)="onSubmit()"
+*ngIf="showAddExperience" 
+>
+
+     <div class="form-control">
+         <label for="text">Posición</label></div>
+    <div class="form-control">
+         <input type="text" 
+         name="position" 
+         id="position" 
+         placeholder="Agregue posición"
+         [(ngModel)]="position"
+         />
+     </div>
+     
+     <div class="form-control">
+        <label for="text">Empresa</label></div>
+    <div class="form-control">
+        <input type="text" 
+        name="company" 
+        id="company" 
+        placeholder="Agregue empresa" 
+        [(ngModel)]="company"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="text">Modalidad</label></div>
+    <div class="form-control">
+        <input type="text" 
+        name="mode" 
+        id="mode"
+        placeholder="Agregue modalidad" 
+        [(ngModel)]="mode"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="number">Año de inicio</label></div>
+    <div class="form-control">
+        <input type="number" 
+        name="start" 
+        id="start"
+        placeholder="Agregue año" 
+        [(ngModel)]="start"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="number">Año de finalización</label></div>
+    <div class="form-control">
+        <input type="number" 
+        name="end" 
+        id="end"
+        placeholder="Agregue año" 
+        [(ngModel)]="end"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="text">Año de duración</label></div>
+    <div class="form-control">
+        <input type="text" 
+        name="timeElapsed" 
+        id="timeElapsed"
+        placeholder="Agregue tiempo de duración" 
+        [(ngModel)]="timeElapsed"
+        />
+    </div>
+
+    
+    <div class="form-control-buttons">
+        <input type="submit" value="Guardar cambios" class="btn btn-block">
+    </div>
+</form>
