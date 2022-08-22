@@ -61,9 +61,14 @@ div#Logo-AP img{
 
 div#social-media {  
     padding: 10px;
+    padding-left: 430px;
+    float: right;
 }
 
 .btn#boton-logIn {
+    padding: 10px;
+    margin-right: 2px;
+    float: right;
     border-radius: 5px;
     background: rgb(33, 58, 45);
     color: rgb(216, 241, 171);

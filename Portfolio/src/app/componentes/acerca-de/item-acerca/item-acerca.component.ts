@@ -36,8 +36,7 @@ export class ItemAcercaComponent implements OnInit {
 
   onSubmit(acerca: Acerca){
      this.onEditAcerca.emit(acerca);
-  }
- 
+  } 
  
   OnToggleeditAcerca(){
     this.editService.toggleEditAcerca();
